@@ -10,10 +10,8 @@
   -moz-osx-font-smoothing: grayscale;
   /* vriables */
 
-  --background-color: #c0c0c0;
-  --background-decor-color: #2c2c2c;
+  --background-color: #ffffff;
   --text-color: #000000;
-  --text-decor-color: #c0c0c0;
   --title-color: #141414;
 
   --max-width: 2560px;
@@ -36,17 +34,21 @@ body{
   position: inherit;
   overflow: hidden;
 }
+
+
+
 ::-webkit-scrollbar {
-  width: 10px; /* Ширина вертикального скроллбара */
-  height: 10px; /* Высота горизонтального скроллбара */
+  width: .5vw; /* Ширина вертикального скроллбара */
+  height: 5px; /* Высота горизонтального скроллбара */
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--title-color); /* Цвет ползунка */
   border-radius: 10px; /* Скругленные углы */
   border: 0px solid var(--background-color); /* Создание эффекта отступа */
+
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent; /* Цвет трека */
+  background: red; /* Цвет трека */
 }

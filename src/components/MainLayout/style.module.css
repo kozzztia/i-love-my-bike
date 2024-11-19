@@ -4,10 +4,9 @@
     position: fixed;
     width: 100%;
     height: var(--header-height);
-    background-color: var(--background-decor-color);
     inset: 0 0 auto 0;
     z-index: 99;
-    color : var(--text-decor-color);
+    border: 1px solid red;
 }
 .main{
     position: inherit;
@@ -15,13 +14,13 @@
     background: inherit;
     padding-top: var(--header-height);
     min-height: calc(100vh - var(--footer-height));
-    min-height: calc(100svh - var(--footer-height));
+    min-height: calc(100svh*2 - var(--footer-height));
+    border: 1px solid red;
 }
 
 .footer{
     position: inherit;
     width: 100%;
-    background-color: var(--background-decor-color);
-    color: var(--text-decor-color);
     min-height: var(--footer-height);
+    border: 1px solid red;
 }
