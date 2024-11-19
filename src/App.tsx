@@ -1,12 +1,11 @@
-
-import './App.css'
+import Layout from "./components/MainLayout/Layout";
 
 function App() {
 
   return (
-    <>
-    i love my bike
-    </>
+    <Layout>
+        i love my bike
+    </Layout>
   )
 }
 
