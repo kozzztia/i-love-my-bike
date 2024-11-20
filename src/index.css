@@ -11,13 +11,16 @@
   /* vriables */
 
   --background-color: #ffffff;
+  --decoration-color : #A8D5BA;
+  --element-color: #E0E0E0;
+  --element-background-color: #2C6B45;
   --text-color: #000000;
-  --title-color: #141414;
+  --title-color: #333333;
 
   --max-width: 2560px;
   --container-padding: 20px;
-  --header-height: 50px;
-  --footer-height: 50px;
+  --header-height: 60px;
+  --footer-height: 30px;
 }
 body{
   background-color: var(--background-color);
@@ -40,15 +43,14 @@ body{
 ::-webkit-scrollbar {
   width: .5vw; /* Ширина вертикального скроллбара */
   height: 5px; /* Высота горизонтального скроллбара */
+  
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--title-color); /* Цвет ползунка */
-  border-radius: 10px; /* Скругленные углы */
-  border: 0px solid var(--background-color); /* Создание эффекта отступа */
-
+  background-color: var(--decoration-color); /* Цвет ползунка */
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar-track {
-  background: red; /* Цвет трека */
+  background: var(--background-color); /* Цвет трека */
 }

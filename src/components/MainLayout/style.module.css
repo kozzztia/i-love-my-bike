@@ -6,7 +6,7 @@
     height: var(--header-height);
     inset: 0 0 auto 0;
     z-index: 99;
-    border: 1px solid red;
+    background: var(--element-background-color);
 }
 .main{
     position: inherit;
@@ -15,12 +15,11 @@
     padding-top: var(--header-height);
     min-height: calc(100vh - var(--footer-height));
     min-height: calc(100svh*2 - var(--footer-height));
-    border: 1px solid red;
 }
 
 .footer{
     position: inherit;
     width: 100%;
     min-height: var(--footer-height);
-    border: 1px solid red;
+    background: var(--element-background-color);
 }
