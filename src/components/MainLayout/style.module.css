@@ -7,6 +7,7 @@
     inset: 0 0 auto 0;
     z-index: 99;
     background: var(--element-background-color);
+    box-shadow: 0px 0px 6px 0px var(--element-background-color);
 }
 .main{
     position: inherit;
@@ -22,4 +23,5 @@
     width: 100%;
     min-height: var(--footer-height);
     background: var(--element-background-color);
+    box-shadow: 0px 0px 6px 0px var(--element-background-color);
 }

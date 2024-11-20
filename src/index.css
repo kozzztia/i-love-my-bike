@@ -21,9 +21,10 @@
   --container-padding: 20px;
   --header-height: 60px;
   --footer-height: 30px;
+  --radius: 10px;
 }
 body{
-  background-color: var(--background-color);
+  background-color: var(--decoration-color);
   color: var(--text-color);
 }
 
@@ -47,10 +48,12 @@ body{
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--decoration-color); /* Цвет ползунка */
+  background-color: var(--element-background-color); /* Цвет ползунка */
   cursor: pointer;
+  border : 1px solid var(--decoration-color);
+  border-radius: var(--radius);
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--background-color); /* Цвет трека */
+  background: var(--decoration-color); /* Цвет трека */
 }
