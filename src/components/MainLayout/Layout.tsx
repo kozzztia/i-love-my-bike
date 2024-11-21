@@ -1,16 +1,20 @@
 import style from './style.module.css'
+import Container from '../Container/Container'
 
 const Layout: React.FC<LayoutType> = ({ children }) => {
     return (
         <>
-            <header className={style.header}>
-                header
+            <header className={style.header}>               
+                <Container>header</Container>
             </header>
+            <nav className={style.navigation}>
+                <Container>navigation</Container>
+            </nav>
             <main className={style.main}>
-                {children}
+                <Container>{children}</Container>
             </main>
             <footer className={style.footer}>
-                footer
+                <Container>footer</Container>
             </footer>
         </>
     )

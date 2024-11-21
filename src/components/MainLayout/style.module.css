@@ -1,4 +1,15 @@
-
+.header,
+.navigation,
+.main,
+.footer{
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    &>*{
+        flex :1;
+        flex-shrink: 0;
+    }
+}
 
 .header{
     position: fixed;
@@ -7,21 +18,31 @@
     inset: 0 0 auto 0;
     z-index: 99;
     background: var(--element-background-color);
-    box-shadow: 0px 0px 6px 0px var(--element-background-color);
+}
+.navigation{
+    position: fixed;
+    width: 100%;
+    height: var(--navigation-height);
+    background: var(--navigation-bg-color);
+    top: var(--header-height);
+    z-index: 99;
 }
 .main{
     position: inherit;
     width: 100%;
-    background: inherit;
-    padding-top: var(--header-height);
+    background: var(--main-background-color);
+    padding-top: calc(var(--header-height) + var(--navigation-height));
     min-height: calc(100vh - var(--footer-height));
-    min-height: calc(100svh*2 - var(--footer-height));
+    min-height: calc(100svh - var(--footer-height));
+    section{
+        background: var(--background-color);
+        border-radius: 0 0 var(--radius) var(--radius);
+    }
 }
 
 .footer{
     position: inherit;
     width: 100%;
     min-height: var(--footer-height);
-    background: var(--element-background-color);
-    box-shadow: 0px 0px 6px 0px var(--element-background-color);
+    background: inherit;
 }
