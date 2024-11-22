@@ -1,5 +1,6 @@
 import style from './style.module.css'
 import Container from '../Container/Container'
+import Navigation from '../Navigation/Navigation'
 
 const Layout: React.FC<LayoutType> = ({ children }) => {
     return (
@@ -8,10 +9,12 @@ const Layout: React.FC<LayoutType> = ({ children }) => {
                 <Container>header</Container>
             </header>
             <nav className={style.navigation}>
-                <Container>navigation</Container>
+                <Container>
+                    <Navigation/>
+                </Container>
             </nav>
             <main className={style.main}>
-                <Container>{children}</Container>
+                <Container size="0">{children}</Container>
             </main>
             <footer className={style.footer}>
                 <Container>footer</Container>
