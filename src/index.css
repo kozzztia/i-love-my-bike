@@ -11,9 +11,9 @@
   /* vriables */
 
   --background-color: #ffffff;
-  --decoration-color : #A8D5BA;
+  --decoration-color : #85a391;
   --element-color: #E0E0E0;
-  --element-background-color: #2C6B45;
+  --element-background-color: #4a6855;
   --navigation-bg-color: #E0E0E0;
   --text-color: #000000;
   --title-color: #2d2d2d2d;
@@ -28,19 +28,19 @@
 
   /* --element-shadow: 0px 0px 6px 0px var(--element-background-color); */
 
-  @media screen and (max-width: 1400px) {
+  /* desktop */
+  @media screen and (max-width: 1401px) {
     --padding: 0 30px;
   }
 
-  
-  @media screen and (max-width: 1000px) { 
+  /* tablet */
+  @media (min-width: 768px) and (max-width: 1400px){
     --padding: 0 20px;
   }
 
-  @media screen and (max-width: 600px) {
+  /* mobile */
+  @media (max-width: 767px) {
     --padding: 0 10px;
-
-
   }
 }
 body{
@@ -56,10 +56,7 @@ body{
 
 #root{
   position: inherit;
-  overflow: hidden;
 }
-
-
 
 ::-webkit-scrollbar {
   width: .5vw; /* Ширина вертикального скроллбара */

@@ -38,6 +38,7 @@
 
     div {
         background: var(--navigation-bg-color);
+
     }
 }
 
@@ -52,6 +53,7 @@
     div {
         background: var(--background-color);
         border-radius: 0 0 var(--radius) var(--radius);
+        overflow: hidden;
     }
 }
 
