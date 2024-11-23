@@ -3,6 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
   font-size: 18px;
+  scroll-behavior: smooth;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -10,7 +11,7 @@
   -moz-osx-font-smoothing: grayscale;
   /* vriables */
 
-  --background-color: #ffffff;
+  --background-color: #ffffffd3;
   --decoration-color : #85a391;
   --element-color: #E0E0E0;
   --element-background-color: #4a6855;
@@ -20,13 +21,11 @@
 
   --max-width: 1400px;
   --container-padding: 20px;
-  --header-height: 30px;
-  --navigation-height: 60px;
+  --header-height: 90px;
   --footer-height: 120px;
   --radius: 10px;
   --padding: 0 50px;
 
-  /* --element-shadow: 0px 0px 6px 0px var(--element-background-color); */
 
   /* desktop */
   @media screen and (max-width: 1401px) {
@@ -44,7 +43,8 @@
   }
 }
 body{
-  background-color: var(--decoration-color);
+  background: var(--decoration-color) url('../main-bg.webp') fixed;
+
   color: var(--text-color);
 }
 
@@ -54,9 +54,6 @@ body{
   box-sizing: border-box;
 }
 
-#root{
-  position: inherit;
-}
 
 ::-webkit-scrollbar {
   width: .5vw; /* Ширина вертикального скроллбара */

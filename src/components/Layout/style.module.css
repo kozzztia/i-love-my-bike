@@ -1,0 +1,32 @@
+
+.layout{
+    position: relative;
+    min-height: 100vh;  
+    max-width: var(--max-width);
+    margin: 0 auto;
+    background: transparent;
+
+    .header{
+        position: fixed;
+        background: var(--element-background-color);
+        height: var(--header-height);
+        z-index: 99;
+        width : 100%;
+        max-width: var(--max-width);
+    }
+    .main{
+        position: relative;
+        background: var(--background-color);
+        min-height: calc(200vh - var(--footer-height));
+        border-bottom-left-radius: var(--radius);
+        border-bottom-right-radius: var(--radius);
+        padding-top: var(--header-height);
+    }
+    .footer{
+        position: relative;
+        background: inherit;
+        height: var(--footer-height);
+    }
+}
+
+
