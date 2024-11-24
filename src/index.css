@@ -54,6 +54,10 @@ body{
   box-sizing: border-box;
 }
 
+ul{
+  list-style: none;
+}
+
 
 ::-webkit-scrollbar {
   width: .5vw; /* Ширина вертикального скроллбара */
