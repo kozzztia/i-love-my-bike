@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import Main from "./Home";
+import Page from "./Page";
 
 
 function App() {
@@ -10,9 +11,7 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Main/>} />
-          <Route path="/mtb" element={<h2>MTB</h2>} />
-          <Route path="/road" element={<h2>ROAD</h2>} />
-          <Route path="/bmx" element={<h2>BMX</h2>} />
+          <Route path="/:category" element={<Page/>} />
         </Routes>
       </Layout>
     </Router>
