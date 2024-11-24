@@ -10,19 +10,23 @@ const Header = () => {
 
     useEffect(() => {
         const hash = location.hash ? location.hash.replace('#', '') : '';
-        document.title = `${location.pathname.replace('/', '') || 'home'}${hash === 'home'? '' : ` ${hash}`}`.toLocaleUpperCase();
+        document.title = `${location.pathname.replace('/', '') || 'main'}${hash === 'main'? '' : ` ${hash}`}`.toLocaleUpperCase();
     }, [location]);
     return (
         <>
             <div className={style.menu}>
-                <h2>{location.pathname.replace('/', '').toLocaleUpperCase() || 'Home'}</h2>
+                <h2>{location.pathname.replace('/', '').toLocaleUpperCase() || 'Main'}</h2>
                 <ul>
                     {
+                        location.pathname === '/' ?
+
                         navLinks.map(({ id, url, title }) => (
                             <li key={id}>
-                                <a href={`/#${url}`}>{title}</a>
+                                <a href={`/#${url}`} >{title}</a>
                             </li>
                         ))
+                        :
+                        <p>bikes folters</p>
                     }
                 </ul>
             </div>

@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
-import Home from "./Home";
+import Main from "./Home";
 
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <Layout>
         <Routes>
-          <Route path="/" element={<Home/>} />
+          <Route path="/" element={<Main/>} />
           <Route path="/mtb" element={<h2>MTB</h2>} />
           <Route path="/road" element={<h2>ROAD</h2>} />
           <Route path="/bmx" element={<h2>BMX</h2>} />
