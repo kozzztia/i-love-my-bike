@@ -31,6 +31,7 @@ return (
                 }
             </ul>
         </div>
+        {/* nav */}
         <ul className={style.nav}>
             {
                 categoryLinks.map(({ id, url, title }) => (
