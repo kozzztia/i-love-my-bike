@@ -22,6 +22,6 @@
     padding : var(--padding);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: start;
     border-bottom: 1px solid var(--decoration-color);
 }
