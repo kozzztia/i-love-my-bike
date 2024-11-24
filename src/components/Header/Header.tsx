@@ -10,15 +10,16 @@ const Header = () => {
 
     useEffect(() => {
         const hash = location.hash ? location.hash.replace('#', '') : '';
-        document.title = `${location.pathname.replace('/', '') || 'main'}${hash === 'main'? '' : ` ${hash}`}`.toLocaleUpperCase();
+        document.title = `${location.pathname.replace('/', '') || 'main'}${hash === 'main' ? '' : ` ${hash}`}`.toLocaleUpperCase();
     }, [location]);
-    return (
-        <>
-            <div className={style.menu}>
-                <h2>{location.pathname.replace('/', '').toLocaleUpperCase() || 'Main'}</h2>
-                <ul>
-                    {
-                        location.pathname === '/' ?
+
+return (
+    <>
+        <div className={style.menu}>
+            <h2>{location.pathname.replace('/', '').toLocaleUpperCase() || 'Main'}</h2>
+            <ul>
+                {
+                    location.pathname === '/' ?
 
                         navLinks.map(({ id, url, title }) => (
                             <li key={id}>
@@ -27,20 +28,20 @@ const Header = () => {
                         ))
                         :
                         <p>bikes folters</p>
-                    }
-                </ul>
-            </div>
-            <ul className={style.nav}>
-                    {
-                        categoryLinks.map(({ id, url, title }) => (
-                            <li key={id}>
-                                <NavLink to={`/${url}`}>{title}</NavLink>
-                            </li>
-                        ))
-                    }
+                }
             </ul>
-        </>
-    )
+        </div>
+        <ul className={style.nav}>
+            {
+                categoryLinks.map(({ id, url, title }) => (
+                    <li key={id}>
+                        <NavLink to={`/${url}`.toLocaleLowerCase()}>{title}</NavLink>
+                    </li>
+                ))
+            }
+        </ul>
+    </>
+)
 }
 
 export default Header
