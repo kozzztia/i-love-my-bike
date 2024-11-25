@@ -1,14 +1,35 @@
-import style from './style.module.css'
-import {navLinks} from '../../consts/consts'
-import {getDictionary} from '../../consts/dictionary'
+import { useEffect, useState } from 'react';
+import style from './style.module.css';
+import { navLinks } from '../../consts/consts';
+import { getDictionary } from '../../consts/dictionary';
+import { BikeType } from './type';
 
 const Banner = () => {
+  const [bannerBike, setBannerBike] = useState<null | BikeType>(null);
+
+  useEffect(() => {
+    fetch('https://funny-fudge-ddda7b.netlify.app/api/randomItem')
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        return res.json();
+      })
+      .then((data) => setBannerBike(data[0]))
+      .catch((error) => console.error('Failed to fetch banner bike:', error));
+  }, []);
+
   return (
     <div id={navLinks[0].url} className={style.banner}>
-        <h2>{getDictionary('bannerTitle')}</h2>
-        
+      <h2>{getDictionary('bannerTitle')}</h2>
+      {bannerBike && (
+        <div>
+          <h3>{bannerBike.name}</h3>
+          <img src={bannerBike.icon} alt={bannerBike.name} />
+        </div>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default Banner
+export default Banner;
