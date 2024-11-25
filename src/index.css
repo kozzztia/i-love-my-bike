@@ -25,21 +25,25 @@
   --footer-height: 120px;
   --radius: 10px;
   --padding: 0 50px;
+  --gap: 20px;
 
 
   /* desktop */
   @media screen and (max-width: 1401px) {
     --padding: 0 30px;
+    --gap: 15px;
   }
 
   /* tablet */
   @media (min-width: 768px) and (max-width: 1400px){
     --padding: 0 20px;
+    --gap :10px
   }
 
   /* mobile */
   @media (max-width: 767px) {
     --padding: 0 10px;
+    --gap: 5px;
   }
 }
 body{

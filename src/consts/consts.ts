@@ -3,8 +3,8 @@
 export const navLinks = [
   {
     id: 1,
-    url: 'main',
-    title: 'Main',
+    url: 'promotion',
+    title: 'promotion',
   },
   {
     id: 2,
