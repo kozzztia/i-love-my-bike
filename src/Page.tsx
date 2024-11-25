@@ -1,11 +1,13 @@
 import { useParams } from 'react-router-dom'
 
 const Page = () => {
-    const { category } = useParams();
+  const { category } = useParams();
   return (
-    <div style={{paddingTop: 'var(--header-height)'}}>
-      <h1>Page : {category}</h1>
-    </div>
+    <>
+      <div style={{ paddingTop: 'var(--header-height)' }}>
+        <h1>Page : {category}</h1>
+      </div>
+    </>
   )
 }
 
