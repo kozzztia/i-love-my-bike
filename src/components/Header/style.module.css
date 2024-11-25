@@ -24,4 +24,8 @@
     align-items: center;
     justify-content: start;
     border-bottom: 1px solid var(--decoration-color);
+
+    li:nth-child(3){
+        margin-left: auto;
+    }
 }

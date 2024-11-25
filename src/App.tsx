@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import Main from "./Home";
 import Page from "./Page";
+import Basket from "./Basket";
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Main/>} />
+          <Route path="/basket" element={<Basket/>} />
           <Route path="/:category" element={<Page/>} />
         </Routes>
       </Layout>

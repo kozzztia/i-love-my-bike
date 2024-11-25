@@ -25,9 +25,14 @@ export const navLinks = [
 
 export const categoryLinks = [
   {
-    id: 0,
+    id: 4,
     url: '',
     title: 'Main',
+  },
+  {
+    id: 5,
+    url: 'basket',
+    title: 'basket',
   },
   {
     id: 1,
@@ -44,5 +49,6 @@ export const categoryLinks = [
     url: 'bmx',
     title: 'BMX Bikes',
   },
+
 ]
 
