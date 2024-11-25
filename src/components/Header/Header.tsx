@@ -16,14 +16,14 @@ const Header = () => {
 return (
     <>
         <div className={style.menu}>
-            <h2>{location.pathname.replace('/', '').toLocaleUpperCase() || 'Main'}</h2>
+            <h2>{location.pathname.replace('/', '').toLocaleUpperCase() || 'MAIN'}</h2>
             <ul>
                 {
                     location.pathname === '/' ?
 
                         navLinks.map(({ id, url, title }) => (
                             <li key={id}>
-                                <a href={`/#${url}`} >{title}</a>
+                                <a href={`/#${url}`}>{title}</a>
                             </li>
                         ))
                         :

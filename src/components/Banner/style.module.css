@@ -1,0 +1,12 @@
+
+.banner{
+    min-height: 60vh;
+
+    position: relative;
+    background-image: url('/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: var(--padding);
+    padding-top: var(--header-height);
+}
