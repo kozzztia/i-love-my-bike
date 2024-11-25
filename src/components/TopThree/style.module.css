@@ -1,0 +1,11 @@
+.topThree{
+    height: clamp(400px, 100vh, 800px);
+    position: relative;
+    background: var(--element-color);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: var(--padding);
+    padding-top: var(--header-height);
+    color : inherit;
+}

@@ -1,6 +1,6 @@
 
 .banner{
-    min-height: 60vh;
+    height: clamp(400px, 100vh, 800px);/* Минимум 400px, максимум 800px, приоритетное значение — 100% высоты окна */
     position: relative;
     background-image: url('/banner.jpg');
     background-size: cover;
