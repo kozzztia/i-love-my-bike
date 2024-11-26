@@ -1,5 +1,16 @@
 
 .promotionCard{
     position: relative;
-    background: red;
+    background: var(--background-color);
+    border-radius: var(--radius);
+    img:nth-child(1){
+        width: 100px;
+    };
+    img:nth-child(2){
+        width: 200px;
+    };
+    h3{
+        color: var(--text-color);
+    }
+
 }
