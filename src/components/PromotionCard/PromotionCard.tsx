@@ -5,7 +5,9 @@ const PromotionCard: React.FC<PromotionCardProps> = ({data , className}) => {
     console.log(data)
   return (
     <div className={[style.promotionCard, className].join(' ')}>
-        <img src={data.link[0]} alt={data.name} srcSet={data.icon} />
+        <img src={data.icon} alt={data.name}/>
+        <img src={data.link[0]} alt={data.name} />
+        <h3>{data.name}</h3>
         
     </div>
   )
