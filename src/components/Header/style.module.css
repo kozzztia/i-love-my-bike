@@ -9,7 +9,7 @@ ul{
     height: 100%;
     background: inherit;
     position: relative;
-    padding : var(--padding);
+    padding : 0 var(--padding);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -21,7 +21,7 @@ ul{
     background: var(--background-color);
     color: var(--element-background-color);
     position: relative;
-    padding : var(--padding);
+    padding : 0 var(--padding);
     border-bottom: 1px solid var(--element-background-color);
 
     li:nth-child(3){

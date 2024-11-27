@@ -1,16 +1,32 @@
 
 .promotionCard{
     position: relative;
-    background: var(--background-color);
+    background: transparent;
     border-radius: var(--radius);
-    img:nth-child(1){
-        width: 100px;
-    };
-    img:nth-child(2){
-        width: 200px;
-    };
-    h3{
-        color: var(--text-color);
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap);  
+    .cardImage{
+        width: 50%;
+        height: 100%;
     }
-
+    .cardArticle{
+        width: 50%;
+        height: 100%;
+    }
+    @media (max-width: 767px) {
+        flex-direction: column;
+        .cardImage{
+            width: 100%;
+            height: 50%;
+        }
+        .cardArticle{
+            width: 100%;
+            height: 50%;
+      }
+    }
 }

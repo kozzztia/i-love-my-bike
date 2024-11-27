@@ -22,7 +22,7 @@
     .main{
         position: relative;
         background: var(--background-color);
-        min-height: calc(100vh - var(--footer-height));
+        min-height: calc(100svh - var(--footer-height));
         border-bottom-left-radius: var(--radius);
         border-bottom-right-radius: var(--radius);
     }

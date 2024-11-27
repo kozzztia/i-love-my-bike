@@ -30,13 +30,7 @@ const Banner = () => {
   return (
     <div id={navLinks[0].url} className={style.banner}>
       <h2>{getDictionary('bannerTitle')}</h2>
-      {isLoading ? (
-        <p>Loading...</p> // Индикатор загрузки
-      ) : bannerBike ? (
-        <PromotionCard data={bannerBike} />
-      ) : (
-        <p>Failed to load bike data.</p> // Сообщение об ошибке
-      )}
+        <PromotionCard data={bannerBike} isLoading = {isLoading}/>
     </div>
   );
 };
