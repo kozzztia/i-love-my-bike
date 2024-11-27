@@ -2,15 +2,13 @@
 import style from './style.module.css'
 import Image from '../Image/Image';
 import Article from '../Article/Article';
-import { useEffect } from 'react';
+import { BikeType } from '../../types/BikeType';
 
-const PromotionCard  = () => {
-  useEffect(() => {
-    console.log('promotion')
-  },[]) 
-
+const PromotionCard: React.FC<Props>  = ({data, isLoading}) => {
+  console.log(data)
   return (
     <div className={style.promotionCard}>
+      {isLoading && <div>Loading...</div>}
       <Image className={style.cardImage}/>
       <Article className={style.cardArticle}/>       
     </div>
@@ -20,6 +18,11 @@ const PromotionCard  = () => {
 
 
 export default PromotionCard
+
+type Props = {
+  data: BikeType | null;
+  isLoading: boolean;
+};
 
 // export  type BikeType = {
 //     id: number;
