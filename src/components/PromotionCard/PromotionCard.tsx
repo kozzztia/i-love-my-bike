@@ -1,21 +1,22 @@
-import { BikeType } from '../../types/BikeType';
-import style from './style.module.css'
 
-const PromotionCard: React.FC<PromotionCardProps> = ({data , className}) => {
-    console.log(data)
+import style from './style.module.css'
+import Image from '../Image/Image';
+import Article from '../Article/Article';
+import { useEffect } from 'react';
+
+const PromotionCard  = () => {
+  useEffect(() => {
+    console.log('promotion')
+  },[]) 
+
   return (
-    <div className={[style.promotionCard, className].join(' ')}>
-        <img src={data.icon} alt={data.name}/>
-        <img src={data.link[0]} alt={data.name} />
-        <h3>{data.name}</h3>
-        
+    <div className={style.promotionCard}>
+      <Image className={style.cardImage}/>
+      <Article className={style.cardArticle}/>       
     </div>
   )
 }
-type PromotionCardProps = {
-    data : BikeType,
-    className?: string,
-}
+
 
 
 export default PromotionCard

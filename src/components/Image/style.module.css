@@ -1,0 +1,4 @@
+.image{
+    background: var(--decoration-color);
+    border-radius: var(--radius);
+}

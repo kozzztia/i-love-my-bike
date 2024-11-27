@@ -9,4 +9,11 @@
     padding: var(--padding);
     padding-top: var(--header-height);
     color : var(--element-color);
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    &>div{
+        flex :1;
+    }
 }

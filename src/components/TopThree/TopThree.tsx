@@ -4,8 +4,8 @@ import {getDictionary} from '../../consts/dictionary'
 
 const TopThree = () => {
   return (
-    <div className={style.topThree} id="topThree">
-        <h2>{getDictionary('topThree')}</h2>
+    <div className={style.topThree} id="top">
+        <h2>{getDictionary('top')}</h2>
     </div>
   )
 }

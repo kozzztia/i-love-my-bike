@@ -37,17 +37,17 @@ export const categoryLinks = [
   {
     id: 1,
     url: 'mtb',
-    title: 'Mountain Bikes',
+    title: 'Mountain',
   },
   {
     id: 2,
     url: 'road',
-    title: 'Road Bikes',
+    title: 'Road',
   },
   {
     id: 3,
     url: 'bmx',
-    title: 'BMX Bikes',
+    title: 'BMX',
   },
 
 ]
