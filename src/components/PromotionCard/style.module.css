@@ -1,7 +1,7 @@
 
 .promotionCard{
     position: relative;
-    background: var(--background-color);
+    background: transparent;
     border-radius: var(--radius);
     overflow: hidden;
     height: 100%;

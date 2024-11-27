@@ -1,4 +1,5 @@
 
 .article{
     background: red;
+    border-radius: var(--radius);
 }

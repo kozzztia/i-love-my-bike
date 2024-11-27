@@ -4,13 +4,20 @@ import Image from '../Image/Image';
 import Article from '../Article/Article';
 import { BikeType } from '../../types/BikeType';
 
-const PromotionCard: React.FC<Props>  = ({data, isLoading}) => {
+const PromotionCard: React.FC<Props> = ({ data, isLoading }) => {
   console.log(data)
+  // const articleData;
+  // const imageData = {
+  //   src: data.icon,
+  //   color: data.color[0],
+  //   name: data.name,
+  //   price: data.price,
+  // } || null;
   return (
     <div className={style.promotionCard}>
       {isLoading && <div>Loading...</div>}
-      <Image className={style.cardImage}/>
-      <Article className={style.cardArticle}/>       
+      <Image className={style.cardImage} />
+      <Article className={style.cardArticle} />
     </div>
   )
 }
@@ -43,4 +50,3 @@ type Props = {
 //     status: string;
 //     iswotch: boolean;
 //   };
-  
