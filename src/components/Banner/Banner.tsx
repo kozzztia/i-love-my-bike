@@ -3,7 +3,8 @@ import style from './style.module.css';
 import { navLinks } from '../../consts/consts';
 import { getDictionary } from '../../consts/dictionary';
 import { BikeType } from '../../types/BikeType';
-import PromotionCard from '../PromotionCard/PromotionCard';
+import { NavLink } from 'react-router-dom';
+import Preloader from '../ui-kit/Preloader/Preloader';
 
 const Banner = () => {
   const [bannerBike, setBannerBike] = useState<null | BikeType>(null);
@@ -30,9 +31,43 @@ const Banner = () => {
   return (
     <div id={navLinks[0].url} className={style.banner}>
       <h2>{getDictionary('bannerTitle')}</h2>
-        <PromotionCard data={bannerBike} isLoading = {isLoading}/>
+      {
+        isLoading ? <Preloader/> : <PromotionCard data={bannerBike}/>
+      }
+
     </div>
   );
 };
 
 export default Banner;
+
+const PromotionCard: React.FC<PromotionCardProps> = ({ data }) => {
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setIsImageLoaded(true);
+  };
+
+  return (
+    <div className={style.promotionCard}>
+      <figure className={[style.cardImage, isImageLoaded ? style.visible : style.hidden].join(' ')}>
+        <img src={data?.link[0]} alt={data?.name} onLoad={handleImageLoad} />
+        <figcaption>{data?.name}</figcaption>
+      </figure>
+      {isImageLoaded && (
+        <article className={style.cardArticle}>
+          <h3>{data?.title}</h3>
+          <p>{data?.description}</p>
+          <NavLink to={`/${data?.category}/${data?.id}`}>
+            {`Link to ${data?.name}`}
+          </NavLink>
+        </article>
+      )}
+    </div>
+  );
+};
+
+type PromotionCardProps = {
+  data: BikeType | null;
+};
+
