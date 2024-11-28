@@ -18,6 +18,6 @@
       left: 0%;
     }
     to {
-      left: 100%;
+      left: calc(100% - 100px);
     }
   }
