@@ -8,33 +8,46 @@ import Preloader from '../ui-kit/Preloader/Preloader';
 
 const Banner = () => {
   const [bannerBike, setBannerBike] = useState<null | BikeType>(null);
-  const [isLoading, setIsLoading] = useState<boolean>(true); // Добавлено состояние загрузки
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  const fetchWithRetries = (url: string, maxRetries: number, interval: number) => {
+    let attempts = 0;
+
+    const fetchAttempt = () => {
+      fetch(url)
+        .then((res) => {
+          if (!res.ok) {
+            throw new Error(`HTTP error! status: ${res.status}`);
+          }
+          return res.json();
+        })
+        .then((data) => {
+          setBannerBike(data[0]);
+          setIsLoading(false);
+        })
+        .catch((error) => {
+          attempts++;
+          console.error(`Attempt ${attempts} failed:`, error);
+          if (attempts < maxRetries) {
+            setTimeout(fetchAttempt, interval); // Повторная попытка через интервал
+          } else {
+            console.error('Max retries reached. Failed to fetch banner bike.');
+            setIsLoading(false);
+          }
+        });
+    };
+
+    fetchAttempt(); // Запуск первой попытки
+  };
 
   useEffect(() => {
-    fetch('https://funny-fudge-ddda7b.netlify.app/api/randomItem')
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error(`HTTP error! status: ${res.status}`);
-        }
-        return res.json();
-      })
-      .then((data) => {
-        setBannerBike(data[0]);
-        setIsLoading(false); // Завершить загрузку
-      })
-      .catch((error) => {
-        console.error('Failed to fetch banner bike:', error);
-        setIsLoading(false); // Завершить загрузку даже при ошибке
-      });
+    fetchWithRetries('https://funny-fudge-ddda7b.netlify.app/api/randomItem', 5, 2000); // 5 попыток с интервалом 2 секунды
   }, []);
 
   return (
     <div id={navLinks[0].url} className={style.banner}>
       <h2>{getDictionary('bannerTitle')}</h2>
-      {
-        isLoading ? <Preloader /> : <PromotionCard data={bannerBike} />
-      }
-
+      {isLoading ? <Preloader /> : <PromotionCard data={bannerBike} />}
     </div>
   );
 };
@@ -68,4 +81,3 @@ const PromotionCard: React.FC<PromotionCardProps> = ({ data }) => {
 type PromotionCardProps = {
   data: BikeType | null;
 };
-

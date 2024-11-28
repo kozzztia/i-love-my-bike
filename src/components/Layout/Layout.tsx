@@ -1,5 +1,6 @@
 import style from './style.module.css';
 import Header from '../Header/Header';
+import Preloader from '../ui-kit/Preloader/Preloader';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -11,7 +12,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         {children}
       </main>
       <footer className={style.footer}>
-        footer
+        <Preloader color={'var(--element-background-color)'}/>
       </footer>
     </div>
   )
