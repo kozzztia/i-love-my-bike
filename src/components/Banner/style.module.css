@@ -42,20 +42,42 @@
     height: auto;
     position: relative;
     overflow: hidden;
-    flex :1.5;
+    flex: 1.5;
+
     img {
-        width : 100%;
+        width: 100%;
         height: 100%;
 
-        object-fit: scale-down;
-        background: var(--background-color);
-        border-radius: var(--radius); 
+        object-fit: contain;
+        background: var(--decoration-color);
+        border-radius: var(--radius);
     }
-    figcaption {
+
+    .name {
         position: absolute;
         font-weight: bold;
         font-size: 25px;
         bottom: 5%;
+        right: 5%;
+        color: var(--element-color);
+        text-shadow: 1px 1px 3px var(--text-color);
+    }
+
+    .price {
+        position: absolute;
+        font-weight: bold;
+        font-size: 25px;
+        bottom: 5%;
+        left: 5%;
+        color: var(--element-color);
+        text-shadow: 1px 1px 3px var(--text-color);
+    }
+
+    .rating {
+        position: absolute;
+        font-weight: bold;
+        font-size: 25px;
+        top: 5%;
         right: 5%;
         color: var(--element-color);
         text-shadow: 1px 1px 3px var(--text-color);
@@ -67,25 +89,54 @@
     height: auto;
     position: relative;
     overflow: hidden;
-    flex :1;
+    flex: 1;
+    padding: 10px;
     border-radius: var(--radius);
     background: var(--background-color);
     color: var(--text-color);
+    .title{
+        font-weight: bold;
+        font-size: 25px;
+        color: var(--decoration-color);
+        margin-bottom :10px;
+        text-shadow: 1px 1px 3px var(--text-color);
+    }; 
+    .description{
+        margin-bottom :10px;
+        font-weight: bold;
+        font-size: 20px;
+
+    };
+    .country{
+        margin-bottom :10px;
+        font-weight: bold;
+        font-size: 25px;
+    }; 
+    .link{
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background: var(--decoration-color);
+        color: var(--element-color);
+        padding: 10px;
+        border-radius: var(--radius);
+        box-shadow: 1px 1px 3px var(--text-color);
+    };
 }
 
 
-    @media (max-width: 767px) {
-        .promotionCard {
-            flex-direction: column;
+@media (max-width: 767px) {
+    .promotionCard {
+        flex-direction: column;
 
-            .cardImage {
-                width: 100%;
-                height: 50%;
-            }
-    
-            .cardArticle {
-                width: 100%;
-                height: 50%;
-            }
+        .cardImage {
+            width: 100%;
+            height: 50%;
+        }
+
+        .cardArticle {
+            width: 100%;
+            height: 50%;
         }
     }
+}

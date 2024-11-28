@@ -65,12 +65,15 @@ const PromotionCard: React.FC<PromotionCardProps> = ({ data }) => {
     <div className={style.promotionCard}>
       <figure className={[style.cardImage, isImageLoaded ? style.visible : style.hidden].join(' ')}>
         <img src={data?.link[0]} alt={data?.name} onLoad={handleImageLoad} />
-        <figcaption>{data?.name}</figcaption>
+        <figcaption className={style.rating}>{data?.rating}</figcaption>
+        <figcaption className={style.price}>{`${data?.price} $`}</figcaption> 
+        <figcaption className={style.name}>{data?.name}</figcaption>
       </figure>
       <article className={[style.cardArticle, isImageLoaded ? style.visible : style.hidden].join(' ')}>
-        <h3>{data?.title}</h3>
-        <p>{data?.description}</p>
-        <NavLink to={`/${data?.category}/${data?.id}`.toLowerCase()}>
+        <h3 className={style.title}>{data?.title}</h3>
+        <p className={style.description}>{data?.description}</p>
+        <p className={style.country}>{data?.country + ' : ' + data?.company}</p>
+        <NavLink className={style.link} to={`/${data?.category}/${data?.id}`.toLowerCase()}>
           {`Link to ${data?.name}`}
         </NavLink>
       </article>
