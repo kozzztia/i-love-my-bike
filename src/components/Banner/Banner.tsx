@@ -32,7 +32,7 @@ const Banner = () => {
     <div id={navLinks[0].url} className={style.banner}>
       <h2>{getDictionary('bannerTitle')}</h2>
       {
-        isLoading ? <Preloader/> : <PromotionCard data={bannerBike}/>
+        isLoading ? <Preloader /> : <PromotionCard data={bannerBike} />
       }
 
     </div>
@@ -54,15 +54,13 @@ const PromotionCard: React.FC<PromotionCardProps> = ({ data }) => {
         <img src={data?.link[0]} alt={data?.name} onLoad={handleImageLoad} />
         <figcaption>{data?.name}</figcaption>
       </figure>
-      {isImageLoaded && (
-        <article className={style.cardArticle}>
-          <h3>{data?.title}</h3>
-          <p>{data?.description}</p>
-          <NavLink to={`/${data?.category}/${data?.id}`}>
-            {`Link to ${data?.name}`}
-          </NavLink>
-        </article>
-      )}
+      <article className={[style.cardArticle, isImageLoaded ? style.visible : style.hidden].join(' ')}>
+        <h3>{data?.title}</h3>
+        <p>{data?.description}</p>
+        <NavLink to={`/${data?.category}/${data?.id}`.toLowerCase()}>
+          {`Link to ${data?.name}`}
+        </NavLink>
+      </article>
     </div>
   );
 };

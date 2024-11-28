@@ -3,6 +3,7 @@ import Layout from "./components/Layout/Layout";
 import Main from "./Home";
 import Page from "./Page";
 import Basket from "./Basket";
+import BikePage from "./BikePage";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Main/>} />
           <Route path="/basket" element={<Basket/>} />
           <Route path="/:category" element={<Page/>} />
+          <Route path="/:category/:id" element={<BikePage />} />
         </Routes>
       </Layout>
     </Router>
