@@ -1,14 +1,23 @@
 import { useParams } from 'react-router-dom'
 import PageContainer from './components/ui-kit/PageContainer/PageContainer';
+import { getDictionary } from './consts/dictionary';
+
 
 const CategoryPage = () => {
   const { category } = useParams();
-  return (
-    <PageContainer hash="category" isSingle={true} isDecore={false}>
+  if (category === 'mtb' || category === 'road' || category === 'bmx') {
+    return (
+      <PageContainer hash="category" isSingle={true} isDecore={false}>
         <h2>Page : {category}</h2>
-    </PageContainer>
+      </PageContainer>
+    )
+  } else {
+    return (
+      <PageContainer hash="error" isSingle={true} isDecore={false}>
+        <h4>{getDictionary('errorTitle')}</h4>
+      </PageContainer>
+    )
+  }
+  }
 
-  )
-}
-
-export default CategoryPage
+  export default CategoryPage

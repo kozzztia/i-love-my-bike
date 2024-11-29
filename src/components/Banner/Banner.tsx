@@ -47,7 +47,7 @@ const Banner = () => {
     <PageContainer  hash="promotion" isSingle={false} isDecore={true}>
       <h2>{getDictionary('bannerTitle')}</h2>
       {isLoading ? (
-        <Preloader color={'var(--background-color)'} />
+        <Preloader />
       ) : (
         <>
           <h4>{bannerBike?.title}</h4>

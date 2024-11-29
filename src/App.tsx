@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main/>} />
           <Route path="/basket" element={<Basket/>} />
-          <Route path="/:category" element={<CategoryPage/>} />
+          <Route path="/:category" element={<CategoryPage />} />
           <Route path="/:category/:id" element={<BikePage />} />
         </Routes>
       </Layout>
