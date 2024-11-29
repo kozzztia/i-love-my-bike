@@ -7,6 +7,7 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    border-bottom: 1px solid var(--element-background-color);
 }
 .decore{
   background-image: url('/banner.jpg');
@@ -18,6 +19,7 @@
 .single{
   min-height: 100svh;
   min-height: 100vh;
+
 }
 .multi{
   min-height: 600px;
@@ -31,8 +33,8 @@
   /* mobile */
   @media (max-width: 767px) {
     &{
-        height: 100svh;
-        height: 100vh;
+        min-height: 100svh;
+        min-height: 100vh;
     }
   }
 }
