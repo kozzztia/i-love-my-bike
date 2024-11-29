@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react';
-import style from './style.module.css';
-import { navLinks } from '../../consts/consts';
 import { getDictionary } from '../../consts/dictionary';
 import { BikeType } from '../../types/BikeType';
 import { NavLink } from 'react-router-dom';
