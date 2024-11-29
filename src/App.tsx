@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import Main from "./Home";
-import Page from "./Page";
+import CategoryPage from "./CategoryPage";
 import Basket from "./Basket";
 import BikePage from "./BikePage";
 
@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main/>} />
           <Route path="/basket" element={<Basket/>} />
-          <Route path="/:category" element={<Page/>} />
+          <Route path="/:category" element={<CategoryPage/>} />
           <Route path="/:category/:id" element={<BikePage />} />
         </Routes>
       </Layout>

@@ -1,30 +1,4 @@
 .banner {
-    min-height: 600px;
-    position: relative;
-    background-image: url('/banner.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: var(--padding);
-    padding-top: var(--header-height);
-    color: var(--element-color);
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    
-  /* tablet */
-  @media (min-width: 768px) and (max-width: 1400px){
-    &{
-        min-height: 500px;
-    }
-  }
-
-  /* mobile */
-  @media (max-width: 767px) {
-    &{
-        height: 100svh;
-        height: 100vh;
-    }
-  }
+  position: relative;
 }
 

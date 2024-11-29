@@ -1,10 +1,10 @@
-import style from './style.module.css'
-
+import { getDictionary } from '../../consts/dictionary'
+import PageContainer from '../ui-kit/PageContainer/PageContainer'
 const About = () => {
   return (
-    <div className={style.about} id="about">
-        about
-    </div>
+    <PageContainer hash="about" isSingle={false} isDecore={false}>
+      <h4>{getDictionary('aboutTitle')}</h4>
+    </PageContainer>
   )
 }
 

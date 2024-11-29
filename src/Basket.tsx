@@ -1,11 +1,10 @@
+import PageContainer from "./components/ui-kit/PageContainer/PageContainer"
 
 const Basket = () => {
   return (
-    <>
-      <div style={{ paddingTop: 'var(--header-height)' }}>
-        basket
-      </div>
-    </>
+    <PageContainer hash="basket" isSingle={true} isDecore={true}>
+      <h4>basket</h4>
+    </PageContainer>
   )
 }
 

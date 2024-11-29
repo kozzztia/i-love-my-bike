@@ -1,25 +1,3 @@
 .contacts{
-    min-height: 600px;
-    position: relative;
-    background: transparent;
-    padding: var(--padding);
-    padding-top: var(--header-height);
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    
-  /* tablet */
-  @media (min-width: 768px) and (max-width: 1400px){
-    &{
-        min-height: 500px;
-    }
-  }
-
-  /* mobile */
-  @media (max-width: 767px) {
-    &{
-        height: 100svh;
-        height: 100vh;
-    }
-  }
+  position: relative;
 }
