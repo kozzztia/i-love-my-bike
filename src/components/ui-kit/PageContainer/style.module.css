@@ -1,0 +1,37 @@
+.container{
+    position: relative;
+    background: transparent;
+    padding: var(--padding);
+    padding-top: var(--header-height);
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.decore{
+  background-image: url('/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color : var(--background-color);
+}
+.single{
+  min-height: 100svh;
+  min-height: 100vh;
+}
+.multi{
+  min-height: 600px;
+    /* tablet */
+  @media (min-width: 768px) and (max-width: 1400px){
+    &{
+        min-height: 500px;
+    }
+  }
+
+  /* mobile */
+  @media (max-width: 767px) {
+    &{
+        height: 100svh;
+        height: 100vh;
+    }
+  }
+}

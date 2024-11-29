@@ -5,6 +5,7 @@ import { getDictionary } from '../../consts/dictionary';
 import { BikeType } from '../../types/BikeType';
 import { NavLink } from 'react-router-dom';
 import Preloader from '../ui-kit/Preloader/Preloader';
+import PageContainer from '../ui-kit/PageContainer/PageContainer';
 
 const Banner = () => {
   const [bannerBike, setBannerBike] = useState<null | BikeType>(null);
@@ -45,7 +46,7 @@ const Banner = () => {
   }, []);
 
   return (
-    <div id={navLinks[0].url} className={style.banner}>
+    <PageContainer  hash="promotion" isSingle={false} isDecore={true}>
       <h2>{getDictionary('bannerTitle')}</h2>
       {isLoading ? (
         <Preloader color={'var(--background-color)'} />
@@ -56,7 +57,7 @@ const Banner = () => {
         </>
       )
       }
-    </div>
+    </PageContainer>
   );
 };
 

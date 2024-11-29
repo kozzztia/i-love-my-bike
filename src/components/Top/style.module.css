@@ -1,25 +1,3 @@
 .top {
-    min-height: 600px;
     position: relative;
-    background: transparent;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: var(--padding);
-    padding-top: var(--header-height);
-    color: inherit;
-
-    @media (min-width: 768px) and (max-width: 1400px){
-        &{
-            min-height: 500px;
-        }
-      }
-    
-      /* mobile */
-      @media (max-width: 767px) {
-        &{
-            height: 100svh;
-            height: 100vh;
-        }
-      }
 }
