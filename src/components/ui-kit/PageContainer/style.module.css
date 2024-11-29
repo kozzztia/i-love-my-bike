@@ -3,6 +3,7 @@
     background: transparent;
     padding: var(--padding);
     padding-top: var(--header-height);
+    padding-bottom: var(--bottom-height);
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
