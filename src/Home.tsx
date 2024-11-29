@@ -1,17 +1,15 @@
 import Banner from "./components/Banner/Banner"
-import TopThree from "./components/TopThree/TopThree"
+import Top from "./components/Top/Top"
+import About from "./components/About/About"
+import Contacts from "./components/Contacts/Contacts"
 
 const Home = () => {
   return (
     <>
         <Banner/>
-        <TopThree/>
-        <div id="projects" style={{height: '60vh', paddingTop: 'var(--header-height)'}}>
-        <h2>projects</h2>
-        </div>
-        <div id="contact" style={{height: '60vh', paddingTop: 'var(--header-height)'}}>
-        <h2>contact</h2>
-        </div>
+        <Top/>
+        <About/>
+        <Contacts/>
     </>
   )
 }
