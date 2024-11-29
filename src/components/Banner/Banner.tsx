@@ -47,40 +47,17 @@ const Banner = () => {
   return (
     <div id={navLinks[0].url} className={style.banner}>
       <h2>{getDictionary('bannerTitle')}</h2>
-      {isLoading ? <Preloader /> : <PromotionCard data={bannerBike} />}
+      {isLoading ? (
+        <Preloader color={'var(--background-color)'} />
+      ) : (
+        <>
+          <h4>{bannerBike?.title}</h4>
+          <NavLink to={`${bannerBike?.category.toLocaleLowerCase()}/${bannerBike?.id}`}>link to bike</NavLink>
+        </>
+      )
+      }
     </div>
   );
 };
 
 export default Banner;
-
-const PromotionCard: React.FC<PromotionCardProps> = ({ data }) => {
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
-
-  const handleImageLoad = () => {
-    setIsImageLoaded(true);
-  };
-
-  return (
-    <div className={style.promotionCard}>
-      <figure className={[style.cardImage, isImageLoaded ? style.visible : style.hidden].join(' ')}>
-        <img src={data?.link[0]} alt={data?.name} onLoad={handleImageLoad} />
-        <figcaption className={style.rating}>{data?.rating}</figcaption>
-        <figcaption className={style.price}>{`${data?.price} $`}</figcaption> 
-        <figcaption className={style.name}>{data?.name}</figcaption>
-      </figure>
-      <article className={[style.cardArticle, isImageLoaded ? style.visible : style.hidden].join(' ')}>
-        <h3 className={style.title}>{data?.title}</h3>
-        <p className={style.description}>{data?.description}</p>
-        <p className={style.country}>{data?.country + ' : ' + data?.company}</p>
-        <NavLink className={style.link} to={`/${data?.category}/${data?.id}`.toLowerCase()}>
-          {`Link to ${data?.name}`}
-        </NavLink>
-      </article>
-    </div>
-  );
-};
-
-type PromotionCardProps = {
-  data: BikeType | null;
-};

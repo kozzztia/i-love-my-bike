@@ -1,13 +1,9 @@
-.banner {
+.about{
     min-height: 600px;
     position: relative;
-    background-image: url('/banner.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: transparent;
     padding: var(--padding);
     padding-top: var(--header-height);
-    color: var(--element-color);
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -27,4 +23,3 @@
     }
   }
 }
-
