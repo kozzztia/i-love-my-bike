@@ -6,20 +6,27 @@ import { useRandomBike, useStateValue, useTopThreeBikes } from "./state/StatePro
 import Preloader from "./components/ui-kit/Preloader/Preloader"
 
 const Home = () => {
-  const {isLoading} = useStateValue();
+  const { isLoading } = useStateValue();
   const bike = useRandomBike();
   const topThreeBikes = useTopThreeBikes();
+
   if (isLoading) {
-    return <Preloader color={'var(--element-background-color)'}/>
+    return <Preloader color={'var(--element-background-color)'} />;
   }
+
+  if (!topThreeBikes) {
+    return <div>No top bikes available</div>; // Резервный вариант, если нет топовых велосипедов
+  }
+
   return (
     <>
-        <Banner bike={bike}/>
-        <Top bikes={topThreeBikes}/>
-        <About/>
-        <Contacts/>
+      <Banner bike={bike} />
+      <Top bikes={topThreeBikes} />
+      <About />
+      <Contacts />
     </>
-  )
-}
+  );
+};
+
 
 export default Home
