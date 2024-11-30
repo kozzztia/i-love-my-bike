@@ -8,6 +8,8 @@ const dictinary = {
     contactsTitle: "Contacts",
     aboutTitle: "About",
     errorTitle: "Error",
+    basketTitle: "Basket",
+    bikeTitle: "Bike"
 };
 
 export const getDictionary = (key: keyof typeof dictinary): string => dictinary[key];
