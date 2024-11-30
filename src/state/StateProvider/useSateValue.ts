@@ -9,3 +9,37 @@ export const useStateValue = () => {
   }
   return context;
 };
+
+export const useRandomBike = () => {
+  const context = useContext(StateContext);
+
+  if (!context) {
+    throw new Error("useRandomBike must be used within a StateProvider");
+  }
+
+  if (context.bikes.length === 0) {
+    return null; 
+  }
+
+  const randomId = Math.floor(Math.random() * context.bikes.length);
+
+  return context.bikes[randomId];
+}
+
+export const useTopThreeBikes = () => {
+  const context = useContext(StateContext);
+
+  if (!context) {
+    throw new Error("useRandomBike must be used within a StateProvider");
+  }
+
+  if (context.bikes.length === 0) {
+    return null; 
+  }
+
+  const topThreeBikes = context.bikes
+  .filter((bike) => bike.rating > 4)
+  .sort((a, b) => b.rating - a.rating)
+  .slice(0, 3);
+  return topThreeBikes;
+}
