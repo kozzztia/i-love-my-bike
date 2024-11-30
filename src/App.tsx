@@ -4,13 +4,12 @@ import Main from "./Home";
 import CategoryPage from "./CategoryPage";
 import Basket from "./Basket";
 import BikePage from "./BikePage";
-import { StateProvider } from "./state/StateProvider/StateProvider";
 
 
 function App() {
 
   return (
-    <StateProvider>
+
       <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <Layout>
           <Routes>
@@ -21,7 +20,6 @@ function App() {
           </Routes>
         </Layout>
       </Router>
-    </StateProvider>
   )
 }
 
