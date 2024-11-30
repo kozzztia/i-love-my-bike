@@ -17,9 +17,9 @@ const Header = () => {
         <>
             <div className={style.menu}>
                 <h2>
-                    {location.pathname === '/' && location.hash === ''
+                    {location.pathname === '/' 
                         ? 'MAIN'
-                        : `${location.pathname.split(/\//g).join(' ').toLocaleUpperCase()} ${location.hash.replace('#', '').toLocaleUpperCase()}`.trim()}
+                        : `${location.pathname.split(/\//g).join(' ').toLocaleUpperCase()}`}
                 </h2>
                 <ul>
                     {
