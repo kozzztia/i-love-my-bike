@@ -12,7 +12,7 @@ const Banner: React.FC<Props> = ({bike}) => {
         <h4>{getDictionary('bannerTitle') + ' ' + bike.name}</h4>
         <p>{bike.description}</p>
         <img  src={bike.icon} alt={bike.name} width={100} height={100}/>
-        <BikeLink title={bike.name} url={`/${bike.category}/${bike.id}`}/>
+        <BikeLink title={`${getDictionary('linkTitle')} ${bike.name}`} url={`/${bike.category}/${bike.id}`}/>
       </PageContainer>
     );
   }
