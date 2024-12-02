@@ -1,5 +1,5 @@
 import { getDictionary } from '../../consts/dictionary';
-import { BikeType } from '../../types/BikeType';
+import { BannerBikeType } from '../../types/BikeType';
 import PageContainer from '../ui-kit/PageContainer/PageContainer';
 import BikeLink from '../ui-kit/BikeLink/BikeLink';
 
@@ -14,10 +14,13 @@ const Top: React.FC<Props> = ({ bikes }) => {
       {
         bikes.map((bike) => (
           <div key={bike.id}>
-            <h5>{bike.name}</h5>
+            <h4>{getDictionary('bannerTitle') + ' ' + bike.title}</h4>
+            <p>{bike.price}</p>
+            <p>{bike.rating}</p>
+            <p>{bike.status}</p>
             <p>{bike.description}</p>
             <img src={bike.icon} alt={bike.name} width={100} height={100} />
-            <BikeLink title={`${getDictionary('linkTitle')}  ${bike.name}`} url={`/${bike.category}/${bike.id}`}/>
+            <BikeLink title={`${getDictionary('linkTitle')} ${bike.name}`} url={`/${bike.category}/${bike.id}`} />
           </div>
         ))
       }
@@ -26,7 +29,7 @@ const Top: React.FC<Props> = ({ bikes }) => {
 }
 
 type Props = {
-  bikes: BikeType[] | null;
+  bikes: BannerBikeType[] | null;
 }
 
 export default Top

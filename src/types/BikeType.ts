@@ -24,4 +24,15 @@ export  type BikeType = {
     status: string;
     iswotch: boolean;
   };
-  
+
+export type BannerBikeType = {
+  title: string, 
+  price: number, 
+  rating: number, 
+  status: string, 
+  description: string, 
+  icon: string, 
+  name: string, 
+  id: number, 
+  category: string
+}
