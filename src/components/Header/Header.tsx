@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import style from './style.module.css';
 import { NavLink, useLocation } from 'react-router-dom';
-import { categoryLinks, navLinks } from '../../consts/consts';
+import {categoryLinks, navLinks } from '../../consts/consts';
 
 
 
@@ -27,11 +27,11 @@ const Header = () => {
 
                             navLinks.map(({ id, url, title }) => (
                                 <li key={id}>
-                                    <a href={`/#${url}`}>{title}</a>
+                                    <a href={`${url}`}>{title}</a>
                                 </li>
                             ))
                             :
-                            <p>bikes folters</p>
+                            <p>no filters yet</p>
                     }
                 </ul>
             </div>

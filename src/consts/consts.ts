@@ -3,22 +3,22 @@
 export const navLinks = [
   {
     id: 1,
-    url: 'promotion',
+    url: '#promotion',
     title: 'Promotion',
   },
   {
     id: 2,
-    url: 'top',
+    url: '#top',
     title: 'Top',
   },
   {
     id: 3,
-    url: 'about',
+    url: '#about',
     title: 'About',
   },
   {
     id: 4,
-    url: 'contacts',
+    url: '#contacts',
     title: 'Contacts',
   },
 ]
@@ -52,4 +52,22 @@ export const categoryLinks = [
 
 ];
 
+
+export const categoryFilters = [
+  {
+    id: 1,
+    url: '#expensive',
+    title: 'expensive',
+  },
+  {
+    id: 2,
+    url: '#cheap',
+    title: 'cheap',
+  },
+  {
+    id: 3,
+    url: '#best',
+    title: 'best',
+  },
+]
 
