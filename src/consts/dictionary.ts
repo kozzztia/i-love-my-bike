@@ -9,7 +9,8 @@ const dictinary = {
     aboutTitle: "About",
     errorTitle: "Error",
     basketTitle: "Basket",
-    bikeTitle: "Bike"
+    bikeTitle: "Bike",
+    linkTitle: "More info about :"
 };
 
 export const getDictionary = (key: keyof typeof dictinary): string => dictinary[key];
