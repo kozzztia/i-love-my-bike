@@ -35,3 +35,12 @@ export const useTopThreeBikes = () => {
   const topThreeBikes = context.bikes.sort((a, b) => b.rating - a.rating).slice(0, 3);
   return topThreeBikes;
 };
+
+export const useCategoryBikes = (category: string) => {
+  const context = useContext(StateContext);
+  if (!context) {
+    throw new Error("useCategoryBikes must be used within a StateProvider");
+  }
+  const categoryBikes = context.bikes.filter((bike) => bike.category === category.toLocaleUpperCase());
+  return categoryBikes;
+}

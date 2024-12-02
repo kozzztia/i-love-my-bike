@@ -7,6 +7,8 @@ const BikePage = () => {
   return (
     <PageContainer hash="bike" isSingle={true} isDecore={false}>
         <h4>{getDictionary('bikeTitle') + ' ' + id + ' ' + category}</h4>
+
+        
     </PageContainer>
   )
 }
