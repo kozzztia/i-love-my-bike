@@ -44,3 +44,16 @@ export const useCategoryBikes = (category: string) => {
   const categoryBikes = context.bikes.filter((bike) => bike.category === category.toLocaleUpperCase());
   return categoryBikes;
 }
+
+export const useSingleBike = (id: string) => {
+  const context = useContext(StateContext);
+  if (!context) {
+    throw new Error("useSingleBike must be used within a StateProvider");
+  }
+
+  const singleBike = context.bikes.find((bike) => bike.id === Number(id));
+  if (!singleBike) {
+    throw new Error(`Bike with id ${id} not found`);
+  }
+  return singleBike;
+};
