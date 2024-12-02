@@ -88,15 +88,23 @@ export const useCategoryBikes = (category: string) => {
   return categoryBikes;
 }
 
-export const useSingleBike = (id: string) => {
+export const useSingleBike = (id: number) => {
   const context = useContext(StateContext);
+
   if (!context) {
     throw new Error("useSingleBike must be used within a StateProvider");
   }
 
-  const singleBike = context.bikes.find((bike) => bike.id === Number(id));
+  // Если данные еще не загружены
+  if (context.bikes.length === 0) {
+    return null;
+  }
+
+  const singleBike = context.bikes.find((bike) => bike.id === id);
+
   if (!singleBike) {
     throw new Error(`Bike with id ${id} not found`);
   }
+
   return singleBike;
 };
