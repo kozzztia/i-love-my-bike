@@ -22,8 +22,27 @@ export const useRandomBike = () => {
   }
 
   const randomId = Math.floor(Math.random() * context.bikes.length);
+  const { title,
+    price,
+    rating,
+    status,
+    description,
+    icon,
+    name,
+    id,
+    category } = context.bikes[randomId];
 
-  return context.bikes[randomId];
+  return {
+    title,
+    price,
+    rating,
+    status,
+    description,
+    icon,
+    name,
+    id,
+    category
+  };
 }
 
 export const useTopThreeBikes = () => {
@@ -32,7 +51,19 @@ export const useTopThreeBikes = () => {
   if (!context) {
     throw new Error("useTopThreeBikes must be used within a StateProvider");
   }
-  const topThreeBikes = context.bikes.sort((a, b) => b.rating - a.rating).slice(0, 3);
+  const result = context.bikes.sort((a, b) => b.rating - a.rating).slice(0, 3);
+  const topThreeBikes = result.map((item) => {
+    return {
+      title: item.title,
+      price: item.price,
+      rating: item.rating,
+      status: item.status,
+      description: item.description,
+      icon: item.icon,
+      name: item.name,
+      id: item.id,
+      category: item.category
+  }});
   return topThreeBikes;
 };
 
@@ -41,7 +72,19 @@ export const useCategoryBikes = (category: string) => {
   if (!context) {
     throw new Error("useCategoryBikes must be used within a StateProvider");
   }
-  const categoryBikes = context.bikes.filter((bike) => bike.category === category.toLocaleUpperCase());
+  const result = context.bikes.filter((bike) => bike.category === category.toLocaleUpperCase());
+  const categoryBikes = result.map((item) => {
+    return {
+      title: item.title,
+      price: item.price,
+      rating: item.rating,
+      status: item.status,
+      description: item.description,
+      icon: item.icon,
+      name: item.name,
+      id: item.id,
+      category: item.category
+  }});
   return categoryBikes;
 }
 
