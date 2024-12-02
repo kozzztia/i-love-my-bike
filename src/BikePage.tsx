@@ -3,10 +3,15 @@ import PageContainer from './components/ui-kit/PageContainer/PageContainer'
 import { getDictionary } from './consts/dictionary'
 import BikeLink from './components/ui-kit/BikeLink/BikeLink'
 import { useSingleBike } from './state/StateProvider/useStateValue'
+import { useEffect } from 'react'
 
 const BikePage = () => {
   const { id, category } = useParams<{ id: string; category: string }>();
   const singleBike = useSingleBike(id!);
+
+  useEffect(()=>{
+    window.scrollTo(0, 0)
+  })
 
   return (
     <PageContainer hash="bike" isSingle={true} isDecore={false}>
