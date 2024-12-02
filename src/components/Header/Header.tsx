@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 import style from './style.module.css';
-import { NavLink, useLocation } from 'react-router-dom';
-import {categoryLinks, navLinks } from '../../consts/consts';
+import { useLocation } from 'react-router-dom';
+import { categoryFilters, categoryLinks, navLinks } from '../../consts/consts';
+import BikeLink from '../ui-kit/BikeLink/BikeLink';
 
 
 
@@ -17,7 +18,7 @@ const Header = () => {
         <>
             <div className={style.menu}>
                 <h2>
-                    {location.pathname === '/' 
+                    {location.pathname === '/'
                         ? 'MAIN'
                         : `${location.pathname.split(/\//g).join(' ').toLocaleUpperCase()}`}
                 </h2>
@@ -31,7 +32,13 @@ const Header = () => {
                                 </li>
                             ))
                             :
-                            <p>no filters yet</p>
+                            categoryLinks.some(link => `${link.url}` === location.pathname.slice(1)) ?
+                                categoryFilters.map(({ id, url, title }) => (
+                                    <li key={id}>
+                                        <a href={`${url}`}>{title}</a>
+                                    </li>
+                                )) :
+                                <li>single bike</li>
                     }
                 </ul>
             </div>
@@ -39,7 +46,7 @@ const Header = () => {
                 {
                     categoryLinks.map(({ id, url, title }) => (
                         <li key={id}>
-                            <NavLink to={`/${url}`.toLocaleLowerCase()}>{title}</NavLink>
+                            <BikeLink title={title} url={`/${url.toLocaleLowerCase()}`} />
                         </li>
                     ))
                 }
@@ -49,3 +56,4 @@ const Header = () => {
 }
 
 export default Header
+
