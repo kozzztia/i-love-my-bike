@@ -1,7 +1,7 @@
 import PageContainer from "./components/ui-kit/PageContainer/PageContainer"
 import { getDictionary } from "./consts/dictionary"
 
-const Basket = () => {
+const BasketPage = () => {
   return (
     <PageContainer hash="basket" isSingle={true} isDecore={true}>
       <h4>{getDictionary('basketTitle')}</h4>
@@ -9,4 +9,5 @@ const Basket = () => {
   )
 }
 
-export default Basket
+
+export default BasketPage

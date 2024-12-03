@@ -13,7 +13,7 @@ const CategoryPage = () => {
     window.scrollTo(0, 0)
   })
   if(!categoryBikes){
-    return <Preloader color={'var(--element-background-color)'}/>
+    return <Preloader />
   }
   return (
     <PageContainer hash="category" isSingle={true} isDecore={false}>

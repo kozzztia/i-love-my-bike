@@ -5,7 +5,7 @@ import Contacts from "./components/Contacts/Contacts"
 import { useRandomBike, useStateValue, useTopThreeBikes } from "./state/StateProvider/useStateValue"
 import Preloader from "./components/ui-kit/Preloader/Preloader"
 
-const Home = () => {
+const HomePage = () => {
   const { isLoading } = useStateValue();
   const bike = useRandomBike();
   const topThreeBikes = useTopThreeBikes();
@@ -29,4 +29,4 @@ const Home = () => {
 };
 
 
-export default Home
+export default HomePage

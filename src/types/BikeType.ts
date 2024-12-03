@@ -1,4 +1,4 @@
-type BikeDetails = {
+export type BikeDetailsType = {
     condition: string;
     frame_size: string;
     model_year: string;
@@ -15,7 +15,7 @@ export  type BikeType = {
     country: string;
     count: number;
     description: string;
-    details: BikeDetails;
+    detailsjson: BikeDetailsType;
     icon: string;
     link: string[];
     price: number;

@@ -45,6 +45,6 @@ const CategoryList: React.FC<Props> = ({ categoryBikes, className }) => {
 export default CategoryList;
 
 type Props = {
-    categoryBikes: BannerBikeType[] | [],
+    categoryBikes: BannerBikeType[],
     className?: string,
 }

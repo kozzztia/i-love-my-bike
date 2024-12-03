@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
-import Main from "./Home";
+import HomePage from "./HomePage";
 import CategoryPage from "./CategoryPage";
-import Basket from "./Basket";
+import BasketPage from "./BasketPage";
 import BikePage from "./BikePage";
 
 
@@ -13,8 +13,8 @@ function App() {
       <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <Layout>
           <Routes>
-            <Route path="/" element={<Main />} />
-            <Route path="/basket" element={<Basket />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/basket" element={<BasketPage />} />
             <Route path="/:category" element={<CategoryPage />} />
             <Route path="/:category/:id" element={<BikePage />} />
           </Routes>
