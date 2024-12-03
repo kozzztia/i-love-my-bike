@@ -95,7 +95,6 @@ export const useSingleBike = (id: number) => {
     throw new Error("useSingleBike must be used within a StateProvider");
   }
 
-  // Если данные еще не загружены
   if (context.bikes.length === 0) {
     return null;
   }
