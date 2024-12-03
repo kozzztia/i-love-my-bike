@@ -6,6 +6,7 @@ import { BikeType } from "../../types/BikeType";
 export const StateProvider: React.FC<Props> = ({ children }) => {
   const [bikes, setBikes] = useState<BikeType[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchBikes = async () => {
@@ -17,7 +18,11 @@ export const StateProvider: React.FC<Props> = ({ children }) => {
         const data: BikeType[] = await response.json();
         setBikes(data);
       } catch (error) {
-        console.error("Ошибка при загрузке велосипедов:", error);
+        if (error instanceof Error) {
+          setError(`Ошибка при загрузке велосипедов: ${error.message}`);
+        } else {
+          setError("Неизвестная ошибка при загрузке велосипедов");
+        }
       } finally {
         setIsLoading(false);
       }
@@ -27,7 +32,7 @@ export const StateProvider: React.FC<Props> = ({ children }) => {
   }, []);
 
   return (
-    <StateContext.Provider value={{ bikes, isLoading }}>
+    <StateContext.Provider value={{ bikes, isLoading , error}}>
       {children}
     </StateContext.Provider>
   );

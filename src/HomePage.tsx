@@ -4,20 +4,24 @@ import About from "./components/About/About"
 import Contacts from "./components/Contacts/Contacts"
 import { useRandomBike, useStateValue, useTopThreeBikes } from "./state/StateProvider/useStateValue"
 import Preloader from "./components/ui-kit/Preloader/Preloader"
+import ErrorPage from "./ErrorPage"
+import { useEffect } from "react"
 
 const HomePage = () => {
-  const { isLoading } = useStateValue();
+  const { isLoading , error} = useStateValue();
   const bike = useRandomBike();
   const topThreeBikes = useTopThreeBikes();
+  useEffect(()=>{
+    scrollTo(0,0)
+  },[])
 
   if (isLoading) {
     return <Preloader color={'var(--element-background-color)'} />;
   }
 
-  if (!topThreeBikes) {
-    return <div>No top bikes available</div>; // Резервный вариант, если нет топовых велосипедов
+  if(error){
+    return <ErrorPage error={error} />
   }
-
   return (
     <>
       <Banner bike={bike} />
