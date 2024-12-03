@@ -1,4 +1,11 @@
 .banner {
   position: relative;
+
+
+  a{
+    position: absolute;
+    bottom : 5%;
+    right : 5%;
+  }
 }
 
