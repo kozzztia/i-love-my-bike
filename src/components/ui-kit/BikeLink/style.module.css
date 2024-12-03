@@ -1,9 +1,14 @@
 
 .bikeLink{
     position: relative;
-    padding : 8px;
+    padding : 5px;
     border: 1px solid var(--element-color);
-    transition: var(--transition)
+    transition: var(--transition);
+    max-width:240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .active{

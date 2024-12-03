@@ -18,11 +18,11 @@ const Header = () => {
     return (
         <>
             <div className={style.menu}>
-                <h2>
+                <h3>
                     {location.pathname === '/'
                         ? 'MAIN'
                         : `${location.pathname.split(/\//g).join(' ').toLocaleUpperCase()}`}
-                </h2>
+                </h3>
                 <ul>
                     {
                         location.pathname === '/' ?
