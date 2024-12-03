@@ -16,6 +16,7 @@
   --navigation-bg-color: #E0E0E0;
   --text-color: #000000;
   --title-color: #2d2d2d2d;
+  --active-color: rgb(219, 2, 2);
 
   --max-width: 1400px;
   --header-height: 90px;
@@ -24,6 +25,7 @@
   --radius: 10px;
   --padding: 50px;
   --gap: 20px;
+  --transition : all .5s;
 
 
   /* desktop */
@@ -33,7 +35,8 @@
   /* tablet */
   @media (min-width: 768px) and (max-width: 1400px){
     --padding: 30px;
-    --gap :10px
+    --gap :10px;
+    --transition: all 0;
   }
 
   /* mobile */

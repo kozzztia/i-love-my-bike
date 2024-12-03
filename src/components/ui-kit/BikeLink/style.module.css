@@ -1,4 +1,12 @@
 
 .bikeLink{
     position: relative;
+    padding : 8px;
+    border: 1px solid var(--element-color);
+    transition: var(--transition)
+}
+
+.active{
+    color : var(--element-color);
+    background: var(--element-background-color);
 }

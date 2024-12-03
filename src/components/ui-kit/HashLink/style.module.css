@@ -1,0 +1,11 @@
+.link{
+    position: relative;
+    padding : 8px;
+    border: 1px solid var(--element-background-color);
+    transition: var(--transition)
+}
+
+.active{
+    background: var(--element-color);
+    color : var(--element-background-color);
+}

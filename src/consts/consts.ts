@@ -31,8 +31,8 @@ export const categoryLinks = [
   },
   {
     id: 5,
-    url: 'basket',
-    title: 'basket',
+    url: 'cart',
+    title: 'Cart',
   },
   {
     id: 1,
