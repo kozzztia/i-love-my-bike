@@ -3,8 +3,8 @@ import style from './style.module.css'
 
 const BikeLink: React.FC<Props> = ({ title, url, className }) => {
     return (
-        <NavLink to={url.toLocaleLowerCase()} className={`${style.bikeLink} ${className}`}>
-            {`${title}`}
+        <NavLink to={url.toLocaleLowerCase()} className={({isActive})=>[style.bikeLink, className , isActive? style.active:""].join(" ")}>
+            {title}
         </NavLink>
     )
 }

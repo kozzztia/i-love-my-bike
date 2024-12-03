@@ -3,6 +3,7 @@ import style from './style.module.css';
 import { useLocation } from 'react-router-dom';
 import { categoryFilters, categoryLinks, navLinks } from '../../consts/consts';
 import BikeLink from '../ui-kit/BikeLink/BikeLink';
+import HashLink from '../ui-kit/HashLink/HashLink';
 
 
 
@@ -28,14 +29,14 @@ const Header = () => {
 
                             navLinks.map(({ id, url, title }) => (
                                 <li key={id}>
-                                    <a href={`${url}`}>{title}</a>
+                                    <HashLink url={url} title={title}/>
                                 </li>
                             ))
                             :
                             categoryLinks.some(link => `${link.url}` === location.pathname.slice(1)) ?
                                 categoryFilters.map(({ id, url, title }) => (
                                     <li key={id}>
-                                        <a href={`${url}`}>{title}</a>
+                                        <HashLink url={url} title={title}/>
                                     </li>
                                 )) :
                                 <li>single bike</li>

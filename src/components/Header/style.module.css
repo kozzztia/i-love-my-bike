@@ -1,7 +1,6 @@
 ul{
     display: flex;
-    align-items: center;
-    gap: var(--gap);
+    align-items: stretch;
 }
 
 .menu{
@@ -14,6 +13,11 @@ ul{
     align-items: center;
     justify-content: space-between;
     color: var(--element-color);
+    li{
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+    }
 }
 .nav{
     width : 100%;
@@ -27,4 +31,11 @@ ul{
     li:nth-child(3){
         margin-left: auto;
     }
+    li{
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+    }
+
 }
+
