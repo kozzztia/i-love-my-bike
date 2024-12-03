@@ -3,6 +3,7 @@ import Header from '../Header/Header';
 import Preloader from '../ui-kit/Preloader/Preloader';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
+  
   return (
     <div className={style.layout}>
       <header className={style.header}>

@@ -9,7 +9,7 @@ const PageContainer: React.FC<Props> = ({children,hash,isSingle, isDecore}) => {
 }
  type Props = {
     children: React.ReactNode,
-    hash: string,
+    hash?: string,
     isSingle: boolean,
     isDecore: boolean,
  }
