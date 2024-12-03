@@ -8,7 +8,7 @@ const dictinary = {
     contactsTitle: "Contacts",
     aboutTitle: "About",
     errorTitle: "Error",
-    basketTitle: "Basket",
+    cartTitle: "Cart",
     bikeTitle: "Bike",
     linkTitle: "More info about :"
 };

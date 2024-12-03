@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import HomePage from "./HomePage";
 import CategoryPage from "./CategoryPage";
-import BasketPage from "./BasketPage";
+import CartPage from "./CartPage"
 import BikePage from "./BikePage";
 
 
@@ -14,7 +14,7 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/basket" element={<BasketPage />} />
+            <Route path="/cart" element={<CartPage />} />
             <Route path="/:category" element={<CategoryPage />} />
             <Route path="/:category/:id" element={<BikePage />} />
           </Routes>

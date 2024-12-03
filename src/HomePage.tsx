@@ -14,14 +14,14 @@ const HomePage = () => {
   useEffect(()=>{
     scrollTo(0,0)
   },[])
-
-  if (isLoading) {
-    return <Preloader color={'var(--element-background-color)'} />;
-  }
-
   if(error){
     return <ErrorPage error={error} />
   }
+
+  if (isLoading || !bike) {
+    return <Preloader color={'var(--element-background-color)'} />;
+  }
+
   return (
     <>
       <Banner bike={bike} />
