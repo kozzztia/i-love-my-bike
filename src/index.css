@@ -16,7 +16,6 @@
   --navigation-bg-color: #E0E0E0;
   --text-color: #000000;
   --title-color: #2d2d2d2d;
-  --active-color: rgb(219, 2, 2);
 
   --max-width: 1400px;
   --header-height: 90px;
@@ -26,6 +25,7 @@
   --padding: 50px;
   --gap: 20px;
   --transition : all .5s;
+  --link-width: 100px;
 
 
   /* desktop */
@@ -45,6 +45,7 @@
     --gap: 5px;
     --bottom-height: 60px;
     --transition: all 0;
+    --link-width : auto;
   }
 }
 body{

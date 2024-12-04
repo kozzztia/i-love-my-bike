@@ -1,3 +1,14 @@
 .top {
     position: relative;
+    a{
+        white-space: nowrap;
+        max-width : 250px;
+        width :100%;
+        background: var(--element-background-color);
+        &:hover{
+          border: 1px solid var(--element-background-color);
+          color:  var(--element-background-color);
+          background-color: var(--background-color);
+        }
+      }
 }

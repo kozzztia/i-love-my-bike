@@ -1,11 +1,22 @@
 .banner {
   position: relative;
-
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   a{
-    position: absolute;
-    bottom : 5%;
-    right : 5%;
+    position: relative;
+    white-space: nowrap;
+    max-width : 250px;
+    width :100%;
+    background: var(--element-background-color);
+    &:hover{
+      border: 1px solid var(--element-background-color);
+      color:  var(--element-background-color);
+      background-color: var(--background-color);
+    }
   }
 }
 
+@media (max-width: 767px) {
+
+}

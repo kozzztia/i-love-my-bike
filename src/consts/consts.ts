@@ -2,12 +2,12 @@
 
 export const navLinks = [
   {
-    id: 1,
+    id: 2,
     url: '#promotion',
-    title: 'Promotion',
+    title: 'Promo',
   },
   {
-    id: 2,
+    id: 1,
     url: '#top',
     title: 'Top',
   },
@@ -37,7 +37,7 @@ export const categoryLinks = [
   {
     id: 1,
     url: 'mtb',
-    title: 'Mountain',
+    title: 'MTB',
   },
   {
     id: 2,
