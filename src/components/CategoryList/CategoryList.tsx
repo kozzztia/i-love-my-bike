@@ -4,7 +4,6 @@ import { BannerBikeType } from '../../types/BikeType';
 import BikeLink from '../ui-kit/BikeLink/BikeLink';
 import style from './style.module.css'
 import { useLocation } from 'react-router-dom';
-import PageContainer from '../ui-kit/PageContainer/PageContainer';
 
 const CategoryList: React.FC<Props> = ({ categoryBikes, className }) => {
     const hash = useLocation().hash.slice(1);
@@ -29,7 +28,6 @@ const CategoryList: React.FC<Props> = ({ categoryBikes, className }) => {
             {
                 bikes.map((bike) => (
                     <li key={bike.id}>
-                        <PageContainer isSingle={true} isDecore={false}>
                             <img src={bike.icon} alt={bike.name} width={100} height={100} />
                             <p>{bike.title}</p>
                             <p>{bike.price}</p>
@@ -37,7 +35,6 @@ const CategoryList: React.FC<Props> = ({ categoryBikes, className }) => {
                             <p>{bike.status}</p>
                             <p>{bike.description}</p>
                             <BikeLink title={`${getDictionary('linkTitle')} ${bike.name}`} url={`/${bike.category}/${bike.id}`} />
-                        </PageContainer>
                     </li>
                 ))
             }

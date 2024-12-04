@@ -13,7 +13,6 @@ const Top: React.FC<Props> = ({ bikes }) => {
       <h4>{getDictionary('topTitle')}</h4>
       {
         bikes.map((bike) => (
-          <PageContainer isSingle={true} isDecore={false} >
           <div key={bike.id}>
             <h4>{getDictionary('bannerTitle') + ' ' + bike.title}</h4>
             <p>{bike.price}</p>
@@ -23,7 +22,6 @@ const Top: React.FC<Props> = ({ bikes }) => {
             <img src={bike.icon} alt={bike.name} width={100} height={100} />
             <BikeLink title={`${getDictionary('linkTitle')} ${bike.name}`} url={`/${bike.category}/${bike.id}`} />
           </div>
-          </PageContainer>
         ))
       }
     </PageContainer>
