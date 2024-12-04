@@ -1,6 +1,10 @@
-ul{
+.menu, .nav{
     display: flex;
+    justify-content: center;
     align-items: stretch;
+    li{
+        position: relative;
+    }
 }
 
 .menu{
@@ -9,14 +13,19 @@ ul{
     background: inherit;
     position: relative;
     padding : 0 var(--padding);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     color: var(--element-color);
-    li{
+    li:nth-child(1){
+        margin-right: auto;
+    }
+    h3{
+        width :100%;
+        width : var(--link-width);
+        height: 100%;
+        max-height: 44px;
         display: flex;
         justify-content: center;
-        align-items: stretch;
+        align-items: center;
+        padding: 5px;
     }
 }
 .nav{
@@ -27,15 +36,8 @@ ul{
     position: relative;
     padding : 0 var(--padding);
     border-bottom: 1px solid var(--element-background-color);
-
-    li:nth-child(3){
-        margin-left: auto;
+    li:nth-child(2){
+        margin-right: auto;
     }
-    li{
-        display: flex;
-        justify-content: center;
-        align-items: stretch;
-    }
-
 }
 

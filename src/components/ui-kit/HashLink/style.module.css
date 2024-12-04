@@ -1,8 +1,22 @@
 .link{
-    position: relative;
     border: 1px solid var(--element-background-color);
+    display: block;
+    background: inherit;
+
+    padding :5px;
+    height: 100%;
+    width :100%;
+    width : var(--link-width);
+    max-height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: var(--transition);
-    padding : 5px;
+    &:hover, &:active{
+        transition: var(--transition);
+        background: var(--element-color);
+        color : var(--element-background-color);
+    }
 }
 
 .active{

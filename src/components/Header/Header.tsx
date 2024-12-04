@@ -17,32 +17,32 @@ const Header = () => {
 
     return (
         <>
-            <div className={style.menu}>
-                <h3>
-                    {location.pathname === '/'
-                        ? 'MAIN'
-                        : `${location.pathname.split(/\//g).join(' ').toLocaleUpperCase()}`}
-                </h3>
-                <ul>
-                    {
-                        location.pathname === '/' ?
+            <ul className={style.menu}>
+                <li>
+                    <h3>
+                        {location.pathname === '/'
+                            ? 'MAIN'
+                            : `${location.pathname.split(/\//g).join(' ').toLocaleUpperCase()}`}
+                    </h3>
 
-                            navLinks.map(({ id, url, title }) => (
+                </li>
+                {
+                    location.pathname === '/' ?
+                        navLinks.map(({ id, url, title }) => (
+                            <li key={id}>
+                                <HashLink url={url} title={title} />
+                            </li>
+                        ))
+                        :
+                        categoryLinks.some(link => `${link.url}` === location.pathname.slice(1)) ?
+                            categoryFilters.map(({ id, url, title }) => (
                                 <li key={id}>
-                                    <HashLink url={url} title={title}/>
+                                    <HashLink url={url} title={title} />
                                 </li>
-                            ))
-                            :
-                            categoryLinks.some(link => `${link.url}` === location.pathname.slice(1)) ?
-                                categoryFilters.map(({ id, url, title }) => (
-                                    <li key={id}>
-                                        <HashLink url={url} title={title}/>
-                                    </li>
-                                )) :
-                                <li>single bike</li>
-                    }
-                </ul>
-            </div>
+                            )) :
+                            <li>single bike</li>
+                }
+            </ul>
             <ul className={style.nav}>
                 {
                     categoryLinks.map(({ id, url, title }) => (

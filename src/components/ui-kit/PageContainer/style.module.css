@@ -17,9 +17,8 @@
   color : var(--background-color);
 }
 .single{
-  min-height: 100svh;
   min-height: 100vh;
-
+  min-height: 100svh;
 }
 .multi{
   min-height: 600px;
@@ -33,8 +32,9 @@
   /* mobile */
   @media (max-width: 767px) {
     &{
-        min-height: 100svh;
-        min-height: 100vh;
+      min-height: 100vh;
+      min-height: 100svh;
+
     }
   }
 }
