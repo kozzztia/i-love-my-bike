@@ -18,7 +18,7 @@
 }
 .single{
   min-height: 100vh;
-  min-height: 100svh;
+
 }
 .multi{
   min-height: 600px;
@@ -33,7 +33,7 @@
   @media (max-width: 767px) {
     &{
       min-height: 100vh;
-      min-height: 100svh;
+      padding-bottom: calc(100vh - 100svh + var(--padding));
 
     }
   }
