@@ -21,7 +21,9 @@ export const useRandomBike = () => {
     return null;
   }
 
-  const randomId = Math.floor(Math.random() * context.bikes.length);
+
+  const bikes = context.bikes.filter(bike => bike.status === "active")
+  const randomId = Math.floor(Math.random() * bikes.length);
   const { title,
     price,
     rating,
@@ -30,7 +32,7 @@ export const useRandomBike = () => {
     icon,
     name,
     id,
-    category } = context.bikes[randomId];
+    category } = bikes[randomId];
 
   return {
     title,
@@ -51,7 +53,7 @@ export const useTopThreeBikes = () => {
   if (!context) {
     throw new Error("useTopThreeBikes must be used within a StateProvider");
   }
-  const result = context.bikes.sort((a, b) => b.rating - a.rating).slice(0, 3);
+  const result = context.bikes.filter(bike => bike.status === "inactive").sort((a, b) => b.rating - a.rating).slice(0, 3);
   const topThreeBikes = result.map((item) => {
     return {
       title: item.title,
@@ -63,7 +65,8 @@ export const useTopThreeBikes = () => {
       name: item.name,
       id: item.id,
       category: item.category
-  }});
+    }
+  });
   return topThreeBikes;
 };
 
@@ -84,7 +87,8 @@ export const useCategoryBikes = (category: string) => {
       name: item.name,
       id: item.id,
       category: item.category
-  }});
+    }
+  });
   return categoryBikes;
 }
 
@@ -94,7 +98,7 @@ export const useSingleBike = (id: number) => {
   if (!context) {
     throw new Error("useSingleBike must be used within a StateProvider");
   }
-  
+
   if (context.bikes.length === 0) {
     return null;
   }
