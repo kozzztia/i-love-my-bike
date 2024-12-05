@@ -13,15 +13,15 @@ export const StateProvider: React.FC<Props> = ({ children }) => {
       try {
         const response = await fetch("https://funny-fudge-ddda7b.netlify.app/api/items");
         if (!response.ok) {
-          throw new Error(`error: ${response.status}`);
+          throw new Error(`Error: ${response.status}`);
         }
         const data: BikeType[] = await response.json();
         setBikes(data);
       } catch (error) {
         if (error instanceof Error) {
-          setError(`error: ${error.message}`);
+          setError(`Error: ${error.message}`);
         } else {
-          setError("unknow mistake");
+          setError("unknown error ");
         }
       } finally {
         setIsLoading(false);
