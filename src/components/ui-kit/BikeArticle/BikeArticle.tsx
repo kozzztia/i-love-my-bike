@@ -2,7 +2,6 @@ import React from 'react'
 import style from "./style.module.css"
 
 const BikeArticle: React.FC<Props> = ({ article, className = "" }) => {
-    console.log(article)
     return (
         <article className={[style.article, className].join(" ")} >
             <h6>{article?.price} {article?.rating}</h6>
