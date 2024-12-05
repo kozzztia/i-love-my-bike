@@ -22,27 +22,11 @@ export const useRandomBike = () => {
   }
 
   const randomId = Math.floor(Math.random() * context.bikes.length);
-  const { title,
-    price,
-    rating,
-    status,
-    description,
-    icon,
-    name,
-    id,
-    category } = context.bikes[randomId];
+  const result = context.bikes.filter((bike)=> bike.status === "active");
 
-  return {
-    title,
-    price,
-    rating,
-    status,
-    description,
-    icon,
-    name,
-    id,
-    category
-  };
+  const rundomBike = result[randomId]
+
+  return rundomBike;
 }
 
 export const useTopThreeBikes = () => {
@@ -51,7 +35,7 @@ export const useTopThreeBikes = () => {
   if (!context) {
     throw new Error("useTopThreeBikes must be used within a StateProvider");
   }
-  const result = context.bikes.sort((a, b) => b.rating - a.rating).slice(0, 3);
+  const result = context.bikes.filter((bike)=>bike.status === "inactive").sort((a, b) => b.rating - a.rating).slice(0, 3);
   const topThreeBikes = result.map((item) => {
     return {
       title: item.title,
