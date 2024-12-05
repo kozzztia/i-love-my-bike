@@ -3,12 +3,35 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  a{
-    position: relative;
+  display :grid;
+  grid-template-columns: 500px auto;
+  grid-template-areas: "title title"
+                        "image description"
+                        "image description"
+                        ". link"
+  ;
+  gap :var(--gap);
+
+  .title{
+    color: currentColor;
+    grid-area: title;
+  }
+  .image{
+    grid-area: image;
+
+  }
+  .description{
+    grid-area: description;
+  }
+  .link{
+    grid-area: link;
+    align-self: flex-start;
+    justify-self: end;
     white-space: nowrap;
     max-width : 250px;
     width :100%;
     background: var(--element-background-color);
+    transition: var(--transition);
     &:hover{
       border: 1px solid var(--element-background-color);
       color:  var(--element-background-color);
@@ -18,5 +41,12 @@
 }
 
 @media (max-width: 767px) {
-
+  .banner{
+    grid-template-columns: auto;
+    grid-template-rows: 40px auto 30% 50px;
+    grid-template-areas: "title "
+    "image"
+    "description"
+    "link"
+  }
 }
