@@ -9,11 +9,11 @@
 
     @media (max-width: 767px) {
         .title {
-            font-size: 22px;
+            display: none;
         }
 
         .status {
-            display: none;
+            font-size: 22px;
         }
 
         .info {
