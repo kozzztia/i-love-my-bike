@@ -9,8 +9,7 @@
 
     @media (max-width: 767px) {
         .title {
-            font-size: 25px;
-            text-align: center;
+            font-size: 22px;
         }
 
         .status {
@@ -24,12 +23,10 @@
         .price {
             font-size: 22px;
             margin-top: 0;
-            text-align: center;
         }
 
         .rating {
             font-size: 22px;
-            text-align: center;
         }
     }
 }
