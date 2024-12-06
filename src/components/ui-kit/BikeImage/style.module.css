@@ -18,4 +18,9 @@
         left : 10%;
         text-shadow: 0 0px 5px black;
     }
+    @media (max-width: 767px) {
+        figcaption{
+            display: none;
+        }
+    }
 }
