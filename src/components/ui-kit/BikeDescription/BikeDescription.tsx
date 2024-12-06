@@ -15,7 +15,7 @@ const BikeDescription: React.FC<Props> = ({ title, price, rating, descritpion, s
                 {descritpion}
             </p>
             <BikeLink
-                title={`${getDictionary('linkTitle')} ${title}`}
+                title={title}
                 url={`/${category}/${id}`}
                 className={style.link}
             />
