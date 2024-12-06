@@ -5,6 +5,7 @@ import BikeLink from '../ui-kit/BikeLink/BikeLink';
 
 
 const Top: React.FC<Props> = ({ bikes }) => {
+  console.log(bikes)
   if (!bikes) {
     return null
   }

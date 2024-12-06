@@ -1,43 +1,30 @@
 .banner {
   position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  display :grid;
-  grid-template-columns: 500px auto;
-  grid-template-areas: "title title"
-                        "image description"
-                        "image description"
-                        ". link"
-  ;
+  flex-direction: row;
+  align-items: stretch;
   gap :var(--gap);
-
-  .title{
-    color: currentColor;
-    grid-area: title;
-  }
   .image{
-    grid-area: image;
-
+    position: relative;
+    flex :1.5;
   }
   .description{
-    grid-area: description;
+    position: relative;
+    flex :1;
   }
-  .link{
-    grid-area: link;
-    align-self: flex-start;
-    justify-self: end;
-    white-space: nowrap;
-    max-width : 250px;
-    width :100%;
-    background: var(--element-background-color);
-    transition: var(--transition);
-    &:hover{
-      border: 1px solid var(--element-background-color);
-      color:  var(--element-background-color);
-      background-color: var(--background-color);
+  @media (max-width: 767px) {
+    flex-direction: column;
+    .image{
+      position: relative;
+      flex : 0;
+    }
+    .description{
+      position: relative;
+      flex :1;
     }
   }
+  
+
 }
 
 @media (max-width: 767px) {

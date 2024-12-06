@@ -1,3 +1,46 @@
-.description{
+.description {
     position: relative;
+    height: inherit;
+    padding: var(--padding) 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+.title{
+    font-size: 25px;
+    text-align: center;
+}
+.status{
+    font-size: 25px;
+    text-align: center;
+
+}
+.price{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+.rating{
+    font-size: 25px;
+    font-weight: bold;
+
+}
+.info{
+    font-size: 1.5rem;
+}
+
+
+.link {
+    margin-top: auto;
+    position: relative;
+    width: 100%;
+    background: var(--element-background-color);
+    transition: var(--transition);
+
+    &:hover {
+        border: 1px solid var(--element-background-color);
+        color: var(--element-background-color);
+        background-color: var(--background-color);
+    }
 }

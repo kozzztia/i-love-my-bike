@@ -8,13 +8,14 @@ import ErrorPage from "./ErrorPage"
 import { useEffect } from "react"
 
 const HomePage = () => {
-  const { isLoading , error} = useStateValue();
+  const { isLoading, error } = useStateValue();
   const bike = useRandomBike();
   const topThreeBikes = useTopThreeBikes();
-  useEffect(()=>{
-    scrollTo(0,0)
-  },[])
-  if(error){
+
+  useEffect(() => {
+    scrollTo(0, 0)
+  }, [])
+  if (error) {
     return <ErrorPage error={error} />
   }
 
