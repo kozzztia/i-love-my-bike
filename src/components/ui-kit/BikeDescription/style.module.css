@@ -6,27 +6,58 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 10px;
+
+    @media (max-width: 767px) {
+        .title {
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .status {
+            display: none;
+        }
+
+        .info {
+            display: none;
+        }
+
+        .price {
+            font-size: 22px;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .rating {
+            font-size: 22px;
+            text-align: center;
+        }
+    }
 }
-.title{
+
+.title {
     font-size: 25px;
     text-align: center;
 }
-.status{
+
+.status {
     font-size: 25px;
     text-align: center;
 
 }
-.price{
+
+.price {
     font-size: 25px;
     font-weight: bold;
     margin-top: 30px;
 }
-.rating{
+
+.rating {
     font-size: 25px;
     font-weight: bold;
 
 }
-.info{
+
+.info {
     font-size: 1.5rem;
 }
 
