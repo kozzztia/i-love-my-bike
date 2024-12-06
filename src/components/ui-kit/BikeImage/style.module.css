@@ -1,23 +1,21 @@
 .figure{
     position: relative;
-    height: 100%;
+    height: auto;
     width :100%;
     overflow: hidden;
+    padding : var(--padding) 0;
     img{
         position: relative;
         width :100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
         object-position: center;
-
     }
-
-
     figcaption{
         position: absolute;
         white-space: nowrap;
-        bottom: 5%;
-        left : 5%;
+        bottom: 10%;
+        left : 10%;
         text-shadow: 0 0px 5px black;
     }
 }
