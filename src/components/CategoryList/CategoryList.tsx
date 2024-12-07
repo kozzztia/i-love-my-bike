@@ -28,13 +28,14 @@ const CategoryList: React.FC<Props> = ({ categoryBikes, className }) => {
             {
                 bikes.map((bike) => (
                     <li key={bike.id}>
-                            <img src={bike.icon} alt={bike.name} width={100} height={100} />
-                            <p>{bike.title}</p>
+                        <img src={bike.icon} alt={bike.name} width={100} height={100} />
+                        <article>
+                            <h4>{bike.title}</h4>
                             <p>{bike.price}</p>
-                            <p>{bike.rating}</p>
-                            <p>{bike.status}</p>
+                            {bike.status === "active" && <b className={style.status}>{getDictionary('bannerStatus')}</b>}
                             <p>{bike.description}</p>
                             <BikeLink title={`${getDictionary('linkTitle')} ${bike.name}`} url={`/${bike.category}/${bike.id}`} />
+                        </article>
                     </li>
                 ))
             }

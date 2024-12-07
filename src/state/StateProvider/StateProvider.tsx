@@ -7,7 +7,7 @@ export const StateProvider: React.FC<Props> = ({ children }) => {
   const [bikes, setBikes] = useState<BikeType[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-  // moked data
+
 
   
 
