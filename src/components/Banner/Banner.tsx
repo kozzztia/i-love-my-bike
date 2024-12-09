@@ -5,7 +5,6 @@ import BikeImage from '../ui-kit/BikeImage/BikeImage';
 import BikeDescription from '../ui-kit/BikeDescription/BikeDescription';
 
 const Banner: React.FC<Props> = ({ bike }) => {
-  console.log(bike)
   if (!bike) {
     return null;
   } else {

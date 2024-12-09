@@ -2,13 +2,13 @@ import React from 'react'
 import {BikeDetailsType} from "../../../types/BikeType"
 import style from "./style.module.css"
 
-const BikeTable: React.FC<Props> = ({details, className}) => {
+const BikeTable: React.FC<Props> = ({details, className=""}) => {
     const keys = Object.keys(details!)
   return (
-    <div className={[style.table, className?className:""].join()}>
+    <div className={[style.table, className].join(" ")}>
       {keys.map((key) => (
         <p key={key}>
-          <strong>{key}:</strong> {details[key as keyof BikeDetailsType]}
+          <strong>{key.split("_").join(" ")}:</strong> {details[key as keyof BikeDetailsType]}
         </p>
       ))}
     </div>

@@ -1,6 +1,37 @@
 .bike{
     position: relative;
-}
-.bikeTable{
-    background: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: var(--padding);
+    gap : var(--gap);
+    .singleImage{
+        width :100%;
+        height: auto;
+        padding-bottom: 0;
+    }
+    .singleArticle{
+        gap: 10px;
+        width : calc(50% - var(--gap));
+    }
+    .singleTable{
+        width :calc(50% - var(--gap));
+    }
+    .singleSlider{
+        width :100%;
+    }
+    .singleLink{
+        width :100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .singleButton{
+        position: absolute;
+        top : var(--padding);
+        right : var(--padding);
+    }
+
 }
