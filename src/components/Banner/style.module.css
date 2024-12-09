@@ -11,6 +11,9 @@
   .description{
     position: relative;
     flex :1;
+    border: 1px solid var(--element-background-color); /* Граница вокруг статьи */
+    border-radius: var(--radius);
+    background-color: var(--background-color);
   }
   @media (max-width: 767px) {
     flex-direction: column;

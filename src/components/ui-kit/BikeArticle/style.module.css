@@ -2,7 +2,7 @@
     /* max-width: 600px; */
     padding: 1rem;
     border: 1px solid var(--element-background-color); /* Граница вокруг статьи */
-    border-radius: 8px;
+    border-radius: var(--radius);
     background-color: var(--background-color);
   
     h6 {
