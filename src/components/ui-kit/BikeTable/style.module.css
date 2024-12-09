@@ -1,4 +1,28 @@
-.table{
-    position: relative;
-    border :1px solid orange;
-}
+.table {
+        /* max-width: 600px; */
+        padding: 1rem;
+        border: 1px solid var(--element-background-color); /* Рамка для таблицы */
+        border-radius: var(--radius);
+        background-color: var(--background-color);
+      
+        p {
+          display: flex; /* Используем Flexbox для выравнивания текста */
+          justify-content: space-between; /* Разделяем ключ и значение */
+          padding: 0.5rem 0;
+          border-bottom: 1px solid var(--decoration-color); /* Разделительная линия */
+      
+          &:last-child {
+            border-bottom: none; /* Убираем линию у последнего элемента */
+          }
+      
+          strong {
+            font-weight: bold; /* Выделение ключа жирным шрифтом */
+            color: var(--text-color);
+            color: var(--text-color);
+          }
+      
+          span {
+            color: var(--text-color); /* Цвет текста значений */
+          }
+        }
+      }

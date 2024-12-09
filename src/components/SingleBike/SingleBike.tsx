@@ -16,27 +16,32 @@ const SingleBike: React.FC<Props> = ({ singleBike, className }) => {
   return (
     <div className={[style.bike, className].join(' ')}>
 
-      <BikeImage src={singleBike?.icon} title={singleBike?.title} name={singleBike?.name} />
-      <BikeArticle article={{
-        price: singleBike?.price,
-        rating: singleBike?.rating,
-        description: singleBike?.description,
-        country: singleBike?.country,
-        company: singleBike?.company,
-        color: singleBike?.color || []
-      }} />
+      <BikeImage
+        className={style.singleImage}
+        src={singleBike?.icon} title={singleBike?.title} name={singleBike?.name} />
+      <BikeArticle
+        className={style.singleArticle}
+        article={{
+          price: singleBike?.price,
+          rating: singleBike?.rating,
+          description: singleBike?.description,
+          country: singleBike?.country,
+          company: singleBike?.company,
+          color: singleBike?.color
+        }} />
 
-      <BikeTable details={singleBike?.detailsjson} />
+      <BikeTable
+        className={style.singleTable}
+        details={singleBike?.detailsjson} />
 
-      <BikeSlider images={singleBike?.link} />
-
-
-
-
-
-      <button>send to basket</button>
-
-      <BikeLink title={`to ${singleBike?.category}`} url={`/${singleBike?.category}`} />
+      <BikeSlider
+        className={style.singleSlider}
+        images={singleBike?.link} />
+ 
+        <button className={style.singleButton}>send to basket</button>
+        <BikeLink className={style.singleLink}
+        title={`to ${singleBike?.category}`} 
+        url={`/${singleBike?.category}`} />
     </div>
   )
 }
