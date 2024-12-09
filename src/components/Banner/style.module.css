@@ -11,9 +11,19 @@
   .description{
     position: relative;
     flex :1;
+    padding :1rem;
     border: 1px solid var(--element-background-color); /* Граница вокруг статьи */
     border-radius: var(--radius);
     background-color: var(--background-color);
+    h4 {
+      font-style: 25px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
   }
   @media (max-width: 767px) {
     flex-direction: column;
@@ -31,12 +41,5 @@
 }
 
 @media (max-width: 767px) {
-  .banner{
-    grid-template-columns: auto;
-    grid-template-rows: 40px auto 30% 50px;
-    grid-template-areas: "title "
-    "image"
-    "description"
-    "link"
-  }
+
 }
