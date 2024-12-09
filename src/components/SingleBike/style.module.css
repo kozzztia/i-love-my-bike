@@ -12,7 +12,6 @@
         padding-bottom: 0;
     }
     .singleArticle{
-        gap: 10px;
         width : calc(50% - var(--gap));
     }
     .singleTable{
@@ -32,6 +31,14 @@
         position: absolute;
         top : var(--padding);
         right : var(--padding);
+    }
+    @media screen and (max-width: 767px) {
+        .singleArticle{
+            width : 100%;
+        }
+        .singleTable{
+            width :100%;
+        }
     }
 
 }
