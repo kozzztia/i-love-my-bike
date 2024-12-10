@@ -1,23 +1,23 @@
-
-.preloader{
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%);
-    width: 100px;
-    height: 100px;
-    animation: move-left 2s linear infinite;
-    svg{
-        width: 100%;
-        height: 100%;
-    }
+.preloader {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  animation: move-flip 4s ease-in-out infinite alternate;
+  svg {
+    width: 100%;
+    height: 100%;
+    transform-origin: center; 
+  }
 }
 
-@keyframes move-left {
-    from {
-      left: 0%;
-    }
-    to {
-      left: calc(100% - 100px);
-    }
+@keyframes move-flip {
+  0% {
+    left: 0%;
   }
+  100% {
+    left: calc(100% - 100px);
+  }
+}
