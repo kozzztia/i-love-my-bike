@@ -18,7 +18,6 @@ const CategoryPage = () => {
   }
   return (
     <PageContainer hash="category" isSingle={true} isDecore={false}>
-      <h2>Page: {category}</h2>
       <CategoryList categoryBikes={categoryBikes}/>
     </PageContainer>
   );
