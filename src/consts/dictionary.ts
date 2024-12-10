@@ -17,7 +17,8 @@ const dictinary = {
     cartTitle: "Cart",
     bikeTitle: "Bike",
     linkTitle: "Link to ",
-    sendButton: "To cart",
+    removeFromCart: "From cart",
+    addToCart: "To cart",
 };
 
 export const getDictionary = (key: keyof typeof dictinary): string => dictinary[key];
