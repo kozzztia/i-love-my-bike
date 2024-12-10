@@ -6,18 +6,20 @@
     transform: translate(-50%, -50%);
     width: 100px;
     height: 100px;
-    animation: move-left 2s linear infinite;
+    animation: move-rotate 2s linear infinite alternate;
     svg{
         width: 100%;
         height: 100%;
     }
 }
 
-@keyframes move-left {
-    from {
-      left: 0%;
-    }
-    to {
-      left: calc(100% - 100px);
-    }
+@keyframes move-rotate {
+  from {
+    left: 0%;
+    transform: translateY(-50%) rotate(0deg);
   }
+  to {
+    left: calc(100% - 100px);
+    transform: translateY(-50%) rotate(360deg);
+  }
+}

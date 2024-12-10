@@ -31,8 +31,30 @@
         position: absolute;
         top : var(--padding);
         right : var(--padding);
+        border: 1px solid var(--element-color);
+        background: var(--element-background-color);
+        color : var(--element-color);
+        display: block;
+        padding :5px;
+        height: 100%;
+        width :100%;
+        width : var(--link-width);
+        max-height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: var(--transition);
+        font-weight: bold;
+        font-size: 22px;
+        &:hover, &:active{
+            background: var(--element-color);
+            color :var(--element-background-color)
+        }
     }
     @media screen and (max-width: 767px) {
+        .singleButton{
+            font-size: 16px;
+        }
         .singleArticle{
             width : 100%;
         }

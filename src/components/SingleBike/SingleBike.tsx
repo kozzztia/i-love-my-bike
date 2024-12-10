@@ -7,6 +7,7 @@ import BikeSlider from '../ui-kit/BikeSlider/BikeSlider';
 import Preloader from '../ui-kit/Preloader/Preloader';
 import BikeImage from '../ui-kit/BikeImage/BikeImage';
 import BikeArticle from '../ui-kit/BikeArticle/BikeArticle';
+import { getDictionary } from '../../consts/dictionary';
 
 const SingleBike: React.FC<Props> = ({ singleBike, className }) => {
   if (!singleBike) {
@@ -38,7 +39,7 @@ const SingleBike: React.FC<Props> = ({ singleBike, className }) => {
         className={style.singleSlider}
         images={singleBike?.link} />
  
-        <button className={style.singleButton}>send to basket</button>
+        <button className={style.singleButton}>{getDictionary('sendButton')}</button>
         <BikeLink className={style.singleLink}
         title={`to ${singleBike?.category}`} 
         url={`/${singleBike?.category}`} />
