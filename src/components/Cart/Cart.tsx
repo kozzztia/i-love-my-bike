@@ -1,21 +1,22 @@
 import React from 'react'
 import { BikeType } from '../../types/BikeType'
 import ToggleButton from '../ToggleButton/ToggleButton'
+import style from './style.module.css'
 
 const Cart: React.FC<Props> = ({data}) => {
   return (
-    <section>
-        <h4>{data.reduce((total, bike) => total + bike.price, 0)}</h4>
+    <ul className={style.list}>
         {
             data.map(bike => (
-                <div key={bike.id}>
+                <li key={bike.id} className={style.cart}>
+                    <img src={bike.icon} alt={bike.name} />
                     <h3>{bike.title}</h3>
-                    <p>{bike.price}</p>
-                    <ToggleButton id={bike.id} />
-                </div>
+                    <p>{bike.price}$</p>
+                    <ToggleButton id={bike.id}/>
+                </li>
             ))
         }
-    </section>
+    </ul>
   )
 }
 
