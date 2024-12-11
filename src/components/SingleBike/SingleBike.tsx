@@ -13,6 +13,7 @@ const SingleBike: React.FC<Props> = ({ singleBike, className }) => {
 
 
 
+
   if (!singleBike) {
     return <Preloader />
   }
@@ -42,7 +43,11 @@ const SingleBike: React.FC<Props> = ({ singleBike, className }) => {
         className={style.singleSlider}
         images={singleBike?.link} />
 
-      <ToggleButton id={singleBike?.id} className={style.singleButton} />
+      <ToggleButton
+        id={singleBike?.id}
+        className={style.singleButton}
+      />
+
       <BikeLink className={style.singleLink}
         title={`to ${singleBike?.category}`}
         url={`/${singleBike?.category}`} />
