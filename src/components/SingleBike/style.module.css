@@ -29,7 +29,7 @@
 
     .singleButton{
         position: absolute;
-        top : var(--padding);
+        top : calc(var(--padding)*2);
         right : var(--padding);
         border: 1px solid var(--element-color);
         background: var(--element-background-color);
@@ -38,7 +38,7 @@
         padding :5px;
         height: 100%;
         width :100%;
-        width : var(--link-width);
+        max-width : 100px;
         max-height: 44px;
         display: flex;
         justify-content: center;
