@@ -10,16 +10,25 @@
     .cart{
         position: relative;
         width :100%;
+        height: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: left;
-        align-items: flex-end;
+        justify-content: center;
+        align-items: stretch;
         gap: var(--gap);
         padding : 10px;
         border-bottom: 1px solid var(--element-background-color);
-        color: var(--element-background-color);
+        color: var(--text-color);
+        article{
+            width :100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: var(--gap);
+        }
         img{
-            width : 200px;
+            min-width: 300px;
+            width : 20%;
             height: auto;
         }
         h3{
@@ -27,11 +36,12 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
-        p{
-            font-weight: bold;
+        strong{
             font-size: 25px;
-            height: 100%;
         }
+        p{
+            font-size: 22px;
+        };
 
         button{
             position: relative;
@@ -44,6 +54,14 @@
             }
         }
 
+        @media screen and (max-width: 767px) {  
+            img{
+                min-width : 100%;
+            }
+            &.cart{
+                flex-direction: column;
+            }
+        }
     }
 
 }

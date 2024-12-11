@@ -21,10 +21,11 @@
         width :100%;
     }
     .singleLink{
-        width :100%;
+        max-width: 200px;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
+        margin-left: auto;
     }
 
     .singleButton{

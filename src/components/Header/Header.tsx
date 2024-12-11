@@ -40,7 +40,7 @@ const Header = () => {
                                     <HashLink url={url} title={title} />
                                 </li>
                             )) :
-                            <li>single bike</li>
+                            <li><strong>single bike</strong></li>
                 }
             </ul>
             <ul className={style.nav}>
