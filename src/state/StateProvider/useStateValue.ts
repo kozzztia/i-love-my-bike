@@ -111,3 +111,16 @@ export const useSingleBike = (id: number) => {
 
   return singleBike;
 };
+
+export const useLocalBikes = (localBikes: number[]) => {
+  const context = useContext(StateContext);
+  if (!context) {
+    throw new Error("useSingleBike must be used within a StateProvider");
+  }
+  if (context.bikes.length === 0) {
+    return null;
+  }
+  const result = context.bikes.filter((bike) => localBikes.includes(bike.id));
+
+  return result;
+}

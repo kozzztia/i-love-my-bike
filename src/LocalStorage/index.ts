@@ -1,21 +1,23 @@
 const key = "bikes";
 
+export const getLocalBikes= (): number[] => {
+    const data = localStorage.getItem(key);
+    return data ? data.split(",").map(Number) : [];
+};
+
+const setLocalBikes = (data: number[]) => {
+    localStorage.setItem(key, data.join(","));
+};
+
 
 export const toggleItem = (id: number): void => {
+    const ids = getLocalBikes();
+    const index = ids.indexOf(id);
 
-    const existingData = localStorage.getItem(key);
-
-    if (existingData) {
-        const ids = existingData.split(",").map(Number);
-        if (!ids.includes(id)) {
-            ids.push(id);
-            localStorage.setItem(key, ids.join(","));
-        }else if (ids.includes(id)) {
-            ids.splice(ids.indexOf(id), 1);
-            localStorage.setItem(key, ids.join(","));
-        }
+    if (index === -1) {
+        ids.push(id); 
     } else {
-
-        localStorage.setItem(key, id.toString());
+        ids.splice(index, 1); 
     }
+    setLocalBikes(ids);
 };
