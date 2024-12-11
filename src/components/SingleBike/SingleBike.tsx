@@ -7,7 +7,7 @@ import BikeSlider from '../ui-kit/BikeSlider/BikeSlider';
 import Preloader from '../ui-kit/Preloader/Preloader';
 import BikeImage from '../ui-kit/BikeImage/BikeImage';
 import BikeArticle from '../ui-kit/BikeArticle/BikeArticle';
-import ToggleButton from '../ui-kit/ToggleButton/ToggleButton';
+import ToggleButton from '../ToggleButton/ToggleButton';
 
 const SingleBike: React.FC<Props> = ({ singleBike, className }) => {
 
