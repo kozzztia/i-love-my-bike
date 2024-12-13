@@ -25,8 +25,11 @@ const Modal: React.FC<Props> = ({ isOpen, setIsOpen }) => {
     return ReactDOM.createPortal(
       <div className={style.modal} onClick={()=>setIsOpen(false)}>
         <div className={style.content} onClick={(e) => e.stopPropagation()}>
-          <button className={style.close} onClick={()=>setIsOpen(false)}>
+          <button onClick={()=>setIsOpen(false)}>
             back
+          </button>
+          <button>
+            ok
           </button>
         </div>
       </div>,
