@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { categoryFilters, categoryLinks, navLinks } from '../../consts/consts';
 import BikeLink from '../ui-kit/BikeLink/BikeLink';
 import HashLink from '../ui-kit/HashLink/HashLink';
+import { SendButton } from '../ui-kit/SendButton/SendButoon';
 
 
 
@@ -27,20 +28,23 @@ const Header = () => {
 
                 </li>
                 {
-                    location.pathname === '/' ?
+                    location.pathname === '/' ? (
                         navLinks.map(({ id, url, title }) => (
                             <li key={id}>
                                 <HashLink url={url} title={title} />
                             </li>
                         ))
-                        :
-                        categoryLinks.some(link => `${link.url}` === location.pathname.slice(1)) ?
-                            categoryFilters.map(({ id, url, title }) => (
-                                <li key={id}>
-                                    <HashLink url={url} title={title} />
-                                </li>
-                            )) :
-                            <li><strong>single bike</strong></li>
+                    ) : location.pathname === "/cart" ? (
+                        <li><SendButton/></li>
+                    ) : categoryLinks.some(link => `${link.url}` === location.pathname.slice(1)) ? (
+                        categoryFilters.map(({ id, url, title }) => (
+                            <li key={id}>
+                                <HashLink url={url} title={title} />
+                            </li>
+                        ))
+                    ) : (
+                        <li><strong>Single Bike</strong></li>
+                    )
                 }
             </ul>
             <ul className={style.nav}>
@@ -57,4 +61,7 @@ const Header = () => {
 }
 
 export default Header
+
+
+
 

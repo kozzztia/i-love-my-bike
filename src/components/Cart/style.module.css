@@ -64,3 +64,12 @@
     }
 
 }
+.empty{
+    position: absolute;
+/* centerd */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    font-weight: bold;
+}
