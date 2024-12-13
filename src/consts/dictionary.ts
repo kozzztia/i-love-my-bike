@@ -19,6 +19,7 @@ const dictinary = {
     linkTitle: "Link to ",
     remove: "Remove",
     add: "Add",
+    cartEmpty: "The cart is empty for now!",
 };
 
 export const getDictionary = (key: keyof typeof dictinary): string => dictinary[key];
