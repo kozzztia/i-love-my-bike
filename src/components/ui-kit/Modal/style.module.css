@@ -23,6 +23,7 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        gap: var(--gap);
 
     }
 
@@ -39,15 +40,20 @@
         }
         .info{
             width :100%;
+            height: 100px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: center;
             align-items: flex-end;
             gap: var(--gap);
+            p{
+                margin-top: auto;
+            }
         }
         .image{
             position: relative;
-            width : 200px;
+            width : auto;
+            height: 100px;
             padding :0;
         }
     }
