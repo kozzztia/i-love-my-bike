@@ -9,15 +9,80 @@
     justify-content: center;
     align-items: center;
     z-index: 999;
+
     .content {
         background: white;
-        padding: 20px;
-        border-radius: 8px;
-        width: 90%;
+        padding: var(--padding);
+        border-radius: var(--radius);
         max-width: 500px;
-        height: 90%;
-        max-height: 500px;
+        height: auto;
+        min-height: 500px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+    }
+
+    .item{
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: self-start;
+        gap: var(--gap);
+        &:last-child{
+            border-top: 1px solid var(--element-background-color);
+        }
+        .info{
+            width :100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: var(--gap);
+        }
+        .image{
+            position: relative;
+            width : 200px;
+            padding :0;
+        }
+    }
+
+    button{
+        border: 1px solid var(--element-background-color);
+        padding :5px;
+        height: 100%;
+        width :100%;
+        width : var(--link-width);
+        max-height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: var(--transition);
+        background: var(--element-background-color);
+        color: var(--element-color);
+        font-size: 22px;
+        text-transform: capitalize;
+        &:hover, &:active{
+            color : var(--element-background-color);
+            background: var(--element--color);
+        }
+    }
+    p{
+        font-size: 22px;
+        font-weight: bold;
+    }
+    .buttons{
+        display: flex;
+        flex-direction: row;
+        width :100%;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--gap);
+        margin-top: auto;
     }
 }
