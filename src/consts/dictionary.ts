@@ -20,6 +20,8 @@ const dictinary = {
     remove: "Remove",
     add: "Add",
     cartEmpty: "The cart is empty for now!",
+    modalPhone: "insert phone number",
+    modalEmpty: "The cart is empty for now! if you have some question send us message",
 };
 
 export const getDictionary = (key: keyof typeof dictinary): string => dictinary[key];
