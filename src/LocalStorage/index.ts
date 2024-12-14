@@ -21,3 +21,7 @@ export const toggleItem = (id: number): void => {
     }
     setLocalBikes(ids);
 };
+
+export const clearStore = () => {
+    localStorage.removeItem(key);
+}
