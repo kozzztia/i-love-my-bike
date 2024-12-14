@@ -17,7 +17,7 @@ const Top: React.FC<Props> = ({ bikes }) => {
           <div key={bike.id} className={style.item}>       
             <article>
               <h4>{bike.title}</h4>
-              <p>{bike.price}</p>
+              <p>{bike.price}$</p>
               <p>{bike.category}</p>
               <p>{bike.description}</p>
               <BikeLink title={`${getDictionary('linkTitle')} ${bike.name}`} url={`/${bike.category}/${bike.id}`} />
