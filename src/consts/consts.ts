@@ -1,4 +1,5 @@
-
+// import { Fa } from "icons";
+import {FaFacebook, FaInstagram, FaLinkedinIn, FaTwitter, FaYoutube} from "react-icons/fa";
 
 export const navLinks = [
   {
@@ -10,11 +11,6 @@ export const navLinks = [
     id: 1,
     url: '#top',
     title: 'Top',
-  },
-  {
-    id: 3,
-    url: '#about',
-    title: 'About',
   },
   {
     id: 4,
@@ -71,3 +67,35 @@ export const categoryFilters = [
   },
 ]
 
+export const contactLinks = [
+  {
+    id: 1,
+    url: 'https://www.facebook.com/',
+    icon:  FaFacebook,
+    title: 'Facebook',
+  },
+  {
+    id: 2,
+    url: 'https://www.instagram.com/',
+    icon:   FaInstagram,
+    title: 'Instagram',
+  },
+  {
+    id: 3,
+    url: 'https://www.twitter.com/',
+    icon:  FaTwitter,
+    title: 'Twitter',
+  },
+  {
+    id: 4,
+    url: 'https://www.youtube.com/',
+    icon: FaYoutube,
+    title: 'Youtube',
+  },
+  {
+    id: 5,
+    url: 'https://www.linkedin.com/',
+    icon: FaLinkedinIn,
+    title: 'Linkedin',
+  }
+]

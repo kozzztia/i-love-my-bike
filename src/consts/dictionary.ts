@@ -22,6 +22,7 @@ const dictinary = {
     cartEmpty: "The cart is empty for now!",
     modalPhone: "insert phone number",
     modalEmpty: "The cart is empty for now! if you have some question send us message",
+    footer: "This project is created using React Vite as an exam in beetroot academy",
 };
 
 export const getDictionary = (key: keyof typeof dictinary): string => dictinary[key];
