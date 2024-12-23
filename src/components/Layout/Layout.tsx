@@ -1,6 +1,6 @@
 import style from './style.module.css';
 import Header from '../Header/Header';
-import Preloader from '../ui-kit/Preloader/Preloader';
+import { getDictionary } from '../../consts/dictionary';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   
@@ -13,7 +13,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         {children}
       </main>
       <footer className={style.footer}>
-        <Preloader color={'var(--element-background-color)'}/>
+        <p>{getDictionary('footer')}</p>
       </footer>
     </div>
   )

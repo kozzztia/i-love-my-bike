@@ -1,3 +1,58 @@
 .contacts{
   position: relative;
+  border: solid 1px red;
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap :var(--gap);
+  .menu{
+    width: 150px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+
+    .contactItem{
+      display: flex;
+      gap: var(--gap);
+    }
+    li{
+      background: transparent;
+      transition : var(--transition);
+      display: flex;
+      align-items :center;
+      padding :5px;
+      *{
+        transition: inherit;
+      }
+      .icon{
+        font-size: 30px;
+        background: inherit;
+        color: var(--element-background-color);
+
+        margin-top: 5px;
+      }
+      p{
+        font-weight: bold;
+        color: var(--element-background-color);
+      }
+      &:hover{
+        background: var(--element-background-color);
+        .icon{
+          font-size: 30px;
+          background: inherit;
+          color: var(--element-color);
+        }
+        p{
+          color: var(--element-color);
+        }
+      }
+
+    }
+
+  }
+  iframe{
+    width: 100%;
+  }
 }

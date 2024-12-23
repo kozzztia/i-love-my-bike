@@ -29,7 +29,13 @@
     .footer{
         position: relative;
         background: inherit;
+        background: var(--background-color);
         height: var(--footer-height);
+        padding: var(--padding);
+        p{
+            text-align: center;
+            font-size: 22px;
+        }
     }
 }
 

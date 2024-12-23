@@ -5,7 +5,7 @@
   transform: translateY(-50%);
   width: 100px;
   height: 100px;
-  animation: move-flip 4s ease-in-out infinite alternate;
+  animation: move-flip 4s ease-in-out infinite;
   svg {
     width: 100%;
     height: 100%;
