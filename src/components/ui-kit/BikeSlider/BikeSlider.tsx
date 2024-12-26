@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import style from './style.module.css';
+import { FaArrowLeft , FaArrowRight  } from 'react-icons/fa';
 
 const BikeSlider: React.FC<Props> = ({ images, className = '' }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -27,10 +28,10 @@ const BikeSlider: React.FC<Props> = ({ images, className = '' }) => {
                 ))}
             </div>
             <button className={style.prevButton} onClick={prevSlide}>
-                ‹
+                <FaArrowLeft/>
             </button>
             <button className={style.nextButton} onClick={nextSlide}>
-                ›
+                <FaArrowRight/>
             </button>
         </div>
     );
