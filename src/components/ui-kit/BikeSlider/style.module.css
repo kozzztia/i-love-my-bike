@@ -1,12 +1,14 @@
 .sliderWrapper {
   position: relative;
   overflow: auto;
+  background: var(--element-background-color);
+  border-radius: var(--radius);
   .slider {
     position: relative;
     min-height: 700px;
     display: flex;
     @media (max-width: 767px) {
-      min-height: 600px;
+      min-height: 300px;
     }
   }
   .slide {
@@ -31,14 +33,22 @@
     background: transparent;
     border: none;
     outline: none;
-    color: var(--element-background-color);
+    color: var(--element-color);
     padding: 10px;
-    font-size: 200px;
-    top: calc(50% - 100px / 2);
+    font-size: 40px;
+    top: calc(50% - 40px);
     width: 80px;
     height: 80px;
     line-height: 0;
-    text-shadow: 0 0 10px white;
+
+    overflow: hiden;
+    user-select: none;
+    svg{
+      filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    }
+    &:hover , &:active{
+      outline: none;
+    }
   }
   .prevButton {
     left: 0;
