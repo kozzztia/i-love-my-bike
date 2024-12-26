@@ -16,20 +16,16 @@ const BikeSlider: React.FC<Props> = ({ images, className = '' }) => {
 
     return (
         <div className={[style.sliderWrapper, className].join(' ')}>
-            <div className={style.slider} style={ {width: `${images.length * 100}%`}}>
+            <div className={style.slider}>
                 {images.map((image, index) => (
                     <div
                         key={index}
-                        className={`${style.slide} ${
-                            index === currentIndex ? style.active : ''
-                        }`}
-                        style={{ backgroundImage: `url(${image})`}}
+                        className={`${style.slide} ${index === currentIndex ? style.active : ''
+                            }`}
+                        style={{ backgroundImage: `url(${image})` }}
                     />
                 ))}
             </div>
-
-
-
             <button className={style.prevButton} onClick={prevSlide}>
                 ‹
             </button>

@@ -8,6 +8,7 @@
   justify-content: end;
   gap :var(--gap);
   overflow: hidden;
+  padding: 16px;
 
   .menu{
     max-width: 150px;
