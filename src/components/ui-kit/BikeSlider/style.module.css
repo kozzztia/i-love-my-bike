@@ -1,6 +1,49 @@
-.slider{
-    img{
-        width : 320px;
-        height: 320px;
+.sliderWrapper {
+  position: relative;
+  overflow: auto;
+  .slider {
+    position: relative;
+    min-height: 700px;
+    display: flex;
+    @media (max-width: 767px) {
+      min-height: 600px;
     }
+  }
+  .slide {
+    position: absolute;
+    transition: all 0.3s;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-size: contain;
+    inset: 0;
+    opacity: 0;
+    opacity: 0;
+    height: 100%;
+    flex: 1;
+  }
+  .active {
+    opacity: 1;
+  }
+  .prevButton,
+  .nextButton {
+    position: absolute;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--element-background-color);
+    padding: 10px;
+    font-size: 200px;
+    top: calc(50% - 100px / 2);
+    width: 80px;
+    height: 80px;
+    line-height: 0;
+    text-shadow: 0 0 10px white;
+  }
+  .prevButton {
+    left: 0;
+  }
+  .nextButton {
+    right: 0;
+  }
 }

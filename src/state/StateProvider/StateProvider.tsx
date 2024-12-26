@@ -29,8 +29,8 @@ export const StateProvider: React.FC<Props> = ({ children }) => {
     //       model_year: "2023",
     //       frame_material: "Carbon Fiber",
     //     },
-    //     icon: "/public/mock.jpeg",
-    //     link: ["/public/mock.jpeg", "/public/mock.jpeg", "/public/mock.jpeg", "/public/mock.jpeg"],
+    //     icon: "../../../public/mock.jpeg",
+    //     link: ["../../../public/mock.jpeg", "../../../public/mock.jpeg", "../../../public/mock.jpeg", "../../../public/mock.jpeg"],
     //     price: 899.99,
     //     rating: 9,
     //     sale: true,
@@ -53,8 +53,8 @@ export const StateProvider: React.FC<Props> = ({ children }) => {
     //       model_year: "2022",
     //       frame_material: "Aluminum",
     //     },
-    //     icon: "/public/mock.jpeg",
-    //     link: ["/public/mock.jpeg", "/public/mock.jpeg", "/public/mock.jpeg", "/public/mock.jpeg"],
+    //     icon: "../../../public/mock.jpeg",
+    //     link: ["../../../public/mock.jpeg"],
     //     price: 499.99,
     //     rating: 8,
     //     sale: false,
@@ -77,8 +77,8 @@ export const StateProvider: React.FC<Props> = ({ children }) => {
     //       model_year: "2023",
     //       frame_material: "Carbon Fiber",
     //     },
-    //     icon: "/public/mock.jpeg",
-    //     link: ["/public/mock.jpeg", "/public/mock.jpeg", "/public/mock.jpeg", "/public/mock.jpeg"],
+    //     icon: "../../../public/mock.jpeg",
+    //     link: ["../../../public/mock.jpeg", "../../../public/mock.jpeg", "../../../public/mock.jpeg", "/../../../public/mock.jpeg"],
     //     price: 1299.99,
     //     rating: 7,
     //     sale: true,
@@ -101,8 +101,8 @@ export const StateProvider: React.FC<Props> = ({ children }) => {
     //       model_year: "2023",
     //       frame_material: "Steel",
     //     },
-    //     icon: "/public/mock.jpeg",
-    //     link: ["/public/mock.jpeg", "/public/mock.jpeg", "/public/mock.jpeg", "/public/mock.jpeg"],
+    //     icon: "../../../public/mock.jpeg",
+    //     link: ["../../../public/mock.jpeg", "../../../public/mock.jpeg", "../../../public/mock.jpeg", "../../../public/mock.jpeg"],
     //     price: 199.99,
     //     rating: 6,
     //     sale: false,
@@ -120,8 +120,10 @@ export const StateProvider: React.FC<Props> = ({ children }) => {
         const data: BikeType[] = await response.json();
         setBikes(data);
         // setBikes(mockBikes);
+
       } catch (error) {
         if (error instanceof Error) {
+
           setError(`Error: ${error.message}`);
         } else {
           setError("unknown error ");
