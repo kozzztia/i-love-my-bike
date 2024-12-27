@@ -11,8 +11,8 @@
         gap: var(--gap);
 
         img {
-            height: 300px;
-            width: auto;
+            height: auto;
+            width: 100%;
         }
 
         article {
@@ -21,15 +21,26 @@
             flex-direction: column;
             justify-content: start;
             align-items: center;
-
-            h4 {
-                font-style: 25px;
-                margin-bottom: 10px;
+            border: 1px solid var(--element-background-color); 
+            border-radius : var(--radius);
+            padding :10px;
+            p, span{
+                margin-bottom: var(--gap);
             }
-
-            p {
-                font-size: 22px;
-                margin-bottom: 5px;
+            span{
+                width :100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap : var(--gap);
+                h4 {
+                    font-style: 25px;
+                }
+    
+                p {
+                    font-size: 22px;
+                }
             }
 
             a {
@@ -65,10 +76,6 @@
             article {
                 h4 {
                     text-align: center;
-                }
-
-                p {
-                    display: none;
                 }
 
                 a {
