@@ -35,7 +35,6 @@
         justify-content: center;
         align-items: self-start;
         gap: var(--gap);
-        border-bottom: 1px solid var(--element-background-color);
         &:last-child{
             border-top: 1px solid var(--element-background-color);
         }
